@@ -21,5 +21,9 @@ public class ModItems {
             Registration.ITEMS.register("omni_tool",
                     ()-> new ItemOmniTool());
 
+    public static final RegistryObject<OmniDataPadItem> OMNI_DATA_PAD =
+            Registration.ITEMS.register("omni_data_pad",
+                    ()-> new OmniDataPadItem());
+
     public static void register() { }
 }

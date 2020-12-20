@@ -65,4 +65,16 @@ public class helpers {
         }
         player.sendMessage(new StringTextComponent("--------------------------------------"),player.getUniqueID());
     }
+
+    /* TODO: It might make sense to get these methods inside two seperate classes. One that Outputs
+        everything and one that actually returns the values.
+        That way you can call the getting of the values inside the OmniTool RightClick Method and save it to the
+        "Data Pad"
+    */
+    public static double getHardWaterDensity(int x, int z)
+    {
+        double result = 0;
+        result = randomGenerator(0, x, z, 0.01, 2.0);
+        return result;
+    }
 }
