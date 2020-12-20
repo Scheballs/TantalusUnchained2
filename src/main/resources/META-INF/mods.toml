@@ -1,0 +1,36 @@
+modLoader="javafml"
+loaderVersion="[35,)"
+license="MIT"
+
+[[mods]]
+  issueTrackerURL="https://github.com/Scheballs/TantalusUnchained/issues"
+  modId="tantalusunchained"
+  version="${file.jarVersion}"
+  displayName="Tantalus Unchained"
+  # updateJSONURL="http://myurl.me/"
+  displayURL="https://github.com/Scheballs/TantalusUnchained/wiki"
+  logoFile="tchain_logo.png"
+  authors="Scheballs"
+  credits="tlannigan and Trakaa, Oh and I'd like to thank Jesus, Baby Jesus, Sweet Cream Butter Jesus and Cheesus Christ."
+  description='''
+   Backstory
+  While exploring the overworld you come across some mysterious artifacts which appear to have decayed over the years. Each artifact holds similar markings. Making the connection, you begin to collect these artifacts and when you piece them together, they combine in a spark of light. This artifact mysteriously powers up drawing power from the sky. The tablet emits a slight glow in your hand. You can begin to make out building plans for what appears to be some sort of planetary scale resource harvester. There are schematics for extracting resources from the various worlds. The tablet also describes how to combine them into more complex materials.
+  
+   Plot
+  Who made this? What are they making? Only one way to find out. Start building...
+  Tantalus Unchained brings a world full of resources and manufacturing never encountered before in Minecraft finally within reach, get it? Just google Tantalus.
+  
+  You are a lowly being who has uncovered clues left behind from what you can only describe as great race of deep space inhabitants who battle over contested planetary resources in order to feed their insatiable demand for materials and infrastructure to build massive space fairing stuff and things. Basically this mod is made to appease your inner Industrial Engineer!'''
+  
+  [[dependencies.tantalusunchained]]
+      modId="forge"
+      mandatory=true
+      versionRange="[35.0,)"
+      ordering="NONE"
+      side="BOTH"
+  [[dependencies.tantalusunchained]]
+      modId="minecraft"
+      mandatory=true
+      versionRange="[1.16.4,1.17)"
+      ordering="NONE"
+      side="BOTH"

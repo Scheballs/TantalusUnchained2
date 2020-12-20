@@ -1,0 +1,33 @@
+{
+  "itemGroup.creative_tab": "Tantalus Unchained",
+
+  "block.tantalusunchained.block_tantalum": "Tantalum Block",
+  "block.tantalusunchained.ore_tantalum": "Tantalum Ore",
+  "block.tantalusunchained.block_resource_harvester": "\u00A72Resource Harvester",
+
+  "item.tantalusunchained.guide_book": "\u00A72Guide Book",
+  "item.tantalusunchained.omni_tool": "\u00A72Omni Tool",
+
+  "item.tantalusunchained.ingot_tantalum": "Tantalum Ingot",
+  "item.tantalusunchained.nugget_tantalum": "Tantalum Nugget",
+  "item.tantalusunchained.dust_tantalum": "Tantalum Dust",
+
+  "item.tantalusunchained.complex_organism": "\u00A72Complex Organism",
+  "item.tantalusunchained.hard_water": "\u00A72Hard Water",
+  "item.tantalusunchained.microbe": "\u00A72Microbe",
+  "item.tantalusunchained.phytoplankton": "\u00A72Phytoplankton",
+  "item.tantalusunchained.organic_compound": "\u00A72Organic Compound",
+  "item.tantalusunchained.plant_biomatter": "\u00A72Plant Biomatter",
+
+  "item.tantalusunchained.inert_gas": "\u00A72Inert Gas",
+  "item.tantalusunchained.ionized_gas": "\u00A72Ionized Gas",
+  "item.tantalusunchained.liquid_hot_magma": "\u00A72Liquid Hot Magma",
+  "item.tantalusunchained.crystalline_solid": "\u00A72Crystalline Solid",
+  "item.tantalusunchained.dense_metal": "\u00A72Dense Metal",
+
+  "item.tantalusunchained.liquid_hot_plasma": "\u00A72Liquid Hot Plasma",
+  "item.tantalusunchained.rare_metal": "\u00A72Rare Metal",
+  "item.tantalusunchained.soft_metal": "\u00A72Soft Metal",
+  "item.tantalusunchained.unstable_gas": "\u00A72Unstable Gas"
+
+}
