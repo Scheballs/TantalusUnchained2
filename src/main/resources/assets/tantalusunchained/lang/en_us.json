@@ -1,6 +1,8 @@
 {
   "itemGroup.creative_tab": "Tantalus Unchained",
 
+  "block.tantalusunchained.block_test_machine": "Machine Block Test",
+
   "block.tantalusunchained.block_tantalum": "Tantalum Block",
   "block.tantalusunchained.ore_tantalum": "Tantalum Ore",
   "block.tantalusunchained.block_resource_harvester": "\u00A72Resource Harvester",
@@ -8,26 +10,27 @@
   "item.tantalusunchained.guide_book": "\u00A72Guide Book",
   "item.tantalusunchained.omni_tool": "\u00A72Omni Tool",
 
+  "item.tantalusunchained.item_resource_scan_report": "Resource Scan Report",
   "item.tantalusunchained.ingot_tantalum": "Tantalum Ingot",
   "item.tantalusunchained.nugget_tantalum": "Tantalum Nugget",
   "item.tantalusunchained.dust_tantalum": "Tantalum Dust",
 
-  "item.tantalusunchained.complex_organism": "\u00A72Complex Organism",
-  "item.tantalusunchained.hard_water": "\u00A72Hard Water",
-  "item.tantalusunchained.microbe": "\u00A72Microbe",
-  "item.tantalusunchained.phytoplankton": "\u00A72Phytoplankton",
-  "item.tantalusunchained.organic_compound": "\u00A72Organic Compound",
-  "item.tantalusunchained.plant_biomatter": "\u00A72Plant Biomatter",
+  "item.tantalusunchained.t1_complex_organism": "\u00A72Complex Organism",
+  "item.tantalusunchained.t1_hard_water": "\u00A72Hard Water",
+  "item.tantalusunchained.t1_microbe": "\u00A72Microbe",
+  "item.tantalusunchained.t1_phytoplankton": "\u00A72Phytoplankton",
+  "item.tantalusunchained.t1_organic_compound": "\u00A72Organic Compound",
+  "item.tantalusunchained.t1_autotrophs": "\u00A72Autotrophs",
 
-  "item.tantalusunchained.inert_gas": "\u00A72Inert Gas",
-  "item.tantalusunchained.ionized_gas": "\u00A72Ionized Gas",
-  "item.tantalusunchained.liquid_hot_magma": "\u00A72Liquid Hot Magma",
-  "item.tantalusunchained.crystalline_solid": "\u00A72Crystalline Solid",
-  "item.tantalusunchained.dense_metal": "\u00A72Dense Metal",
+  "item.tantalusunchained.t1_atmospheric_gas": "\u00A7cAtmospheric Gas",
+  "item.tantalusunchained.t1_crystalline_solids": "\u00A7cCrystalline Solids",
+  "item.tantalusunchained.t1_ionic_solutions": "\u00A7cIonic Solutions",
+  "item.tantalusunchained.t1_liquid_hot_magma": "\u00A7cLiquid Hot Magma",
+  "item.tantalusunchained.t1_heavy_metals": "\u00A7cHeavy Metals",
 
-  "item.tantalusunchained.liquid_hot_plasma": "\u00A72Liquid Hot Plasma",
-  "item.tantalusunchained.rare_metal": "\u00A72Rare Metal",
-  "item.tantalusunchained.soft_metal": "\u00A72Soft Metal",
-  "item.tantalusunchained.unstable_gas": "\u00A72Unstable Gas"
+  "item.tantalusunchained.t1_suspended_plasma": "\u00A7bSuspended Plasma",
+  "item.tantalusunchained.t1_rare_metals": "\u00A7bRare Metals",
+  "item.tantalusunchained.t1_base_metals": "\u00A7bBase Metals",
+  "item.tantalusunchained.t1_unstable_gas": "\u00A7bUnstable Gas"
 
 }

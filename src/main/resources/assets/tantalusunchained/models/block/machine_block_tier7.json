@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "tantalusunchained:block/machine_block_tier7"
+  }
+}
