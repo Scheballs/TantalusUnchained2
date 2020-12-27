@@ -18,7 +18,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import java.util.List;
 
-import static hamdev.tantalusunchained.util.helpers.dropItemIntoWorld;
+import static hamdev.tantalusunchained.util.helpers.getDimResources;
 
 public class ItemOmniTool extends Item {
     public ItemOmniTool() {
@@ -43,33 +43,50 @@ public class ItemOmniTool extends Item {
                 int x = playerIn.getPosition().getX();
                 int z = playerIn.getPosition().getZ();
                 helpers.densityScanBegin(playerIn);
-                //Create a 0 to 3 second delay between chat messages somehow
+                //TODO: Create a 1 to 3 second delay between chat messages somehow
                 helpers.densityScanComplete(playerIn,x,z);
 
-                ItemStack report_item_stack = new ItemStack(ModItems.ITEM_RESOURCE_SCAN_REPORT.get());
-
+                ItemStack reportItemStackHas = new ItemStack(ModItems.ITEM_RESOURCE_SCAN_REPORT.get());
+                ItemStack reportItemStackNew = new ItemStack(ModItems.ITEM_RESOURCE_SCAN_REPORT.get());
                 // Checks for the Item Resource Scan Report
-                if(playerIn.inventory.hasItemStack(report_item_stack))
+                if(playerIn.inventory.hasItemStack(reportItemStackHas) && !reportItemStackHas.hasTag()
+                        && playerIn.inventory.getFirstEmptyStack() > 0)
                 {
-                    int slotId = playerIn.inventory.getSlotFor(report_item_stack);
+                    int slotId1 = playerIn.inventory.getSlotFor(reportItemStackHas);
+                    int slotId2 = playerIn.inventory.getFirstEmptyStack();
+                    String[] resources = getDimResources(playerIn);
 
-                    double hardWaterDensity = helpers.getHardWaterDensity(x, z);
-                    CompoundNBT nbt = new CompoundNBT(); // Creates a new NBT Data Object
-                    // This simply saves a double variable inside of it!
-                    // It is good convention to start the key of the NBT Data
-                    // with your modid
-                    nbt.putDouble(TantalusUnchained.MOD_ID + "hard_water_density", hardWaterDensity);
+                    double[] densityPct = helpers.getResourceDensityPct(playerIn, playerIn.chunkCoordX, playerIn.chunkCoordZ);
+                    String worldName = playerIn.world.getDimensionKey().getLocation().toString(); // minecraft:overworld
+                    String chunkCords = "[" + playerIn.chunkCoordX+"x,"+playerIn.chunkCoordZ + "z]"; // [10x,4z]
 
-                    // Important to note, NBTData is saved on ItemStacks not on Items!
-                    // Because Items are singletons.
-                    playerIn.inventory.getStackInSlot(slotId).setTag(nbt);
-                    dropItemIntoWorld(worldIn,playerIn.getPosition(),report_item_stack);
-                    playerIn.inventory.getStackInSlot(slotId).setDisplayName(ITextComponent.getTextComponentOrEmpty(
-                            "Scan Report of "+ playerIn.world.getDimensionKey().getLocation().toString() +" \nChunk [" + playerIn.chunkCoordX + "," + playerIn.chunkCoordZ +"]"));
+                    CompoundNBT nbtResourceWorld = new CompoundNBT();
+                    CompoundNBT nbtResourceChunk = new CompoundNBT();
+                    CompoundNBT nbtResourceName = new CompoundNBT();
+                    CompoundNBT nbtResourceDensity = new CompoundNBT();
 
-                    playerIn.inventory.getStackInSlot(slotId).shrink(1);
+                    playerIn.inventory.add(slotId2, reportItemStackNew);
+
+                    nbtResourceWorld.putString(TantalusUnchained.MOD_ID + ":resource_world" , worldName);
+                    playerIn.inventory.getStackInSlot(slotId2).setTag(nbtResourceWorld);
+
+                    nbtResourceChunk.putString(TantalusUnchained.MOD_ID + ":resource_chunk" , chunkCords);
+                    playerIn.inventory.getStackInSlot(slotId2).setTag(nbtResourceChunk);
+
+                    for (int i=0; i<resources.length ; i++) {
+                        nbtResourceName.putString(TantalusUnchained.MOD_ID + ":resource_name", resources[i]);
+                        playerIn.inventory.getStackInSlot(slotId2).setTag(nbtResourceName);
+                    }
+
+                    for (int i=0; i<resources.length ; i++) {
+                        nbtResourceDensity.putDouble(TantalusUnchained.MOD_ID + ":resource_density", densityPct[i]);
+                        playerIn.inventory.getStackInSlot(slotId2).setTag(nbtResourceDensity);
+                    }
+
+                    String disName = worldName +" Chunk [" + playerIn.chunkCoordX + "x," + playerIn.chunkCoordZ +"z]";
+                    playerIn.inventory.getStackInSlot(slotId2).setDisplayName(new StringTextComponent(disName));
+                    playerIn.inventory.getStackInSlot(slotId1).shrink(1);
                 }
-
                 return new ActionResult<ItemStack>(ActionResultType.SUCCESS, playerIn.getHeldItem(handIn));
             }
         }

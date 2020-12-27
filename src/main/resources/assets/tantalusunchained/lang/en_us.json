@@ -1,7 +1,14 @@
 {
   "itemGroup.creative_tab": "Tantalus Unchained",
 
-  "block.tantalusunchained.block_test_machine": "Machine Block Test",
+  "block.tantalusunchained.machine_block_tier1": "Machine Block Tier 1",
+  "block.tantalusunchained.machine_block_tier2": "Machine Block Tier 2",
+  "block.tantalusunchained.machine_block_tier3": "Machine Block Tier 3",
+  "block.tantalusunchained.machine_block_tier4": "Machine Block Tier 4",
+  "block.tantalusunchained.machine_block_tier5": "Machine Block Tier 5",
+  "block.tantalusunchained.machine_block_tier6": "Machine Block Tier 6",
+  "block.tantalusunchained.machine_block_tier7": "Machine Block Tier 7",
+  "block.tantalusunchained.machine_block_tier8": "Machine Block Tier 8",
 
   "block.tantalusunchained.block_tantalum": "Tantalum Block",
   "block.tantalusunchained.ore_tantalum": "Tantalum Ore",
@@ -10,7 +17,7 @@
   "item.tantalusunchained.guide_book": "\u00A72Guide Book",
   "item.tantalusunchained.omni_tool": "\u00A72Omni Tool",
 
-  "item.tantalusunchained.item_resource_scan_report": "Resource Scan Report",
+  "item.tantalusunchained.item_resource_scan_report": "Blank Resource Scan Report",
   "item.tantalusunchained.ingot_tantalum": "Tantalum Ingot",
   "item.tantalusunchained.nugget_tantalum": "Tantalum Nugget",
   "item.tantalusunchained.dust_tantalum": "Tantalum Dust",

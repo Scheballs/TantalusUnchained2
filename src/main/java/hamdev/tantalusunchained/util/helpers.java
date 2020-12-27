@@ -1,10 +1,7 @@
 package hamdev.tantalusunchained.util;
 
-import hamdev.tantalusunchained.items.ItemResourceScanReport;
-import net.minecraft.entity.item.ItemEntity;
+import com.ibm.icu.number.Precision;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.world.World;
 import java.time.LocalDate;
@@ -15,16 +12,23 @@ import static net.minecraft.util.math.MathHelper.floor;
 
 public class helpers {
 
+    public static String[] resourcesOverworld() {
+        return new String[]{"\u00a72Hard Water", "\u00a72Organic Compounds", "\u00a72Autotrophs", "\u00a72Microbes", "\u00a72Phytoplankton", "\u00a72Complex Lifeforms"};
+    }
+    public static String[] resourcesTheNether() {
+        return new String[]{"\u00a7cBase Metals", "\u00a7cHeavy Metals", "\u00a7cCrystalline Solids", "\u00a7cLiquid Hot Magma", "\u00a7cRare Metals"};
+    }
+    public static String[] resourcesTheEnd() {
+        return new String[]{"\u00a7bAtmospheric Gas", "\u00a7bIonized Gas", "\u00a7bSuspended Plasma", "\u00a7bUnstable Gas"};
+    }
+
     public static String[] getDimResources(PlayerEntity player) {
         String[] resources;
-        if(player.world.getDimensionKey() == World.THE_END) {
-            resources = new String[]{"\u00a7bInert Gas", "\u00a7bIonized Gas", "\u00a7bLiquid Hot Plasma", "\u00a7bUnstable Gas"};
-        }
-        else if(player.world.getDimensionKey() == World.THE_NETHER) {
-            resources = new String[]{"\u00a7cBase Metals", "\u00a7cHeavy Metals", "\u00a7cCrystalline Solids", "\u00a7cLiquid Hot Magma", "\u00a7cRare Metals"};
-        }
-        else {
-            resources = new String[]{"\u00a72Hard Water", "\u00a72Organic Compounds", "\u00a72Autotrophs", "\u00a72Microbes", "\u00a72Phytoplankton", "\u00a72Complex Organisms"};
+        String worldName = player.world.getDimensionKey().getLocation().toString();
+        switch(worldName) {
+            case "minecraft:the_end":resources = resourcesTheEnd();break;
+            case "minecraft:the_nether":resources = resourcesTheNether();break;
+            default:resources = resourcesOverworld();break; //"minecraft:overworld"
         }
         return resources;
     }
@@ -52,6 +56,14 @@ public class helpers {
         return min + (max - min) * generator.nextDouble();
     }
 
+    public static double roundPlaces(double value, int places) {
+        double scale = Math.pow(10, places);
+        return Math.round(value * scale) / scale;
+        //I know this isn't perfect but for my purposes it works just fine for now.
+        //System.out.println(roundPlaces(260.775d, 2));
+        // OUTPUTS: 260.77 instead of expected 260.78
+    }
+
     public static void densityScanBegin(PlayerEntity player) {
         player.sendMessage(new StringTextComponent(
       "\u00a77Scanning chunk [" + player.chunkCoordX +","+ player.chunkCoordZ + "]\u00a77 in "
@@ -62,54 +74,44 @@ public class helpers {
         String[] resources = getDimResources(player);
         double density;
         for(int i = 0; i < resources.length; i++) {
-            density = randomGenerator(i, x, z, 0.01, 2.0);
+            density = randomGenerator(i, x, z, Config.MIN_RESOURCE_DENSITY.get(), Config.MAX_RESOURCE_DENSITY.get());
             String densityPct = String.format("%,.0f", density * 100);
-            String densityUnitsPerHour = String.format("%,.0f", density * 300);
+            String densityUnitsPerHour = String.format("%,.0f", density * Config.BASE_RESOURCE_YIELD.get());
 
             player.sendMessage(new StringTextComponent(resources[i] +"\u00a77: "+ densityPct + "% \u00a77yields "
                     + densityUnitsPerHour +"\u00a77 units per hour" ) ,player.getUniqueID());
         }
-        player.sendMessage(new StringTextComponent(
-                "\u00a77Scan of Chunk [" + player.chunkCoordX +","+ player.chunkCoordZ + "]\u00a77 in "
-                        + player.world.getDimensionKey().getLocation() + " Complete."
-        ),player.getUniqueID());
         player.sendMessage(new StringTextComponent("--------------------------------------"),player.getUniqueID());
     }
 
-    /* TODO: It might make sense to get these methods inside two seperate classes. One that Outputs
+    /* TODO: It might make sense to get these methods inside two separate classes. One that Outputs
         everything and one that actually returns the values.
         That way you can call the getting of the values inside the OmniTool RightClick Method and save it to the
-        "Data Pad"
+        "Resource Scan Report"
     */
-    public static double getHardWaterDensity(int x, int z) {
-        double result = 0;
-        result = randomGenerator(0, x, z, 0.01, 2.0);
-        return result;
-    }
-
-    public static final void dropItemIntoWorld(World world, BlockPos pos, ItemStack item) {
-        Random rand = new Random();
-
-        if (item != null && item.getCount() > 0) {
-            float rx = rand.nextFloat() * 0.8F + 0.1F;
-            float ry = rand.nextFloat() * 0.8F + 0.1F;
-            float rz = rand.nextFloat() * 0.8F + 0.1F;
-
-            ItemEntity entityItem = new ItemEntity(world,
-                    pos.getX() + rx, pos.getY() + ry, pos.getZ() + rz,
-                    item.copy());
-
-            if (item.hasTag()) {
-                entityItem.getItem().setTag(item.getTag().copy());
+    public static double[] getResourceDensityPct(PlayerEntity player, int x, int z) {
+        String[] resources = getDimResources(player);
+        double density;
+        double[] densityPct = new double[resources.length];
+        for(int i = 0; i < resources.length; i++) {
+            density = randomGenerator(i, x, z, 0.01, 2.0);
+            //String densityPct = String.format("%,.0f", density * 100);
+            //String densityYield = String.format("%,.0f", density * 300);
+            densityPct[i] = roundPlaces(density, 4) * 100;
             }
-
-            float factor = 0.05F;
-            entityItem.setMotion(
-                    rand.nextGaussian() * factor,
-                    rand.nextGaussian() * factor + 0.2F,
-                    rand.nextGaussian() * factor);
-            world.addEntity(entityItem);
-            item.setCount(0);
+        return densityPct;
         }
+
+    public static double[] getResourceDensityYield(PlayerEntity player, int x, int z) {
+        String[] resources = getDimResources(player);
+        double density;
+        double[] densityYield = new double[resources.length];
+        for(int i = 0; i < resources.length; i++) {
+            density = randomGenerator(i, x, z, 0.01, 2.0);
+            //String densityPct = String.format("%,.0f", density * 100);
+            //String densityYield = String.format("%,.0f", density * 300);
+            densityYield[i] = roundPlaces(density, 4) * 300;
+        }
+        return densityYield;
     }
 }
