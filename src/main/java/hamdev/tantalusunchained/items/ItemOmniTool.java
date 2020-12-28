@@ -16,9 +16,11 @@ import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.world.World;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import java.util.Arrays;
 import java.util.List;
 
-import static hamdev.tantalusunchained.util.helpers.getDimResources;
+import static hamdev.tantalusunchained.util.helpers.*;
 
 public class ItemOmniTool extends Item {
     public ItemOmniTool() {
@@ -55,37 +57,28 @@ public class ItemOmniTool extends Item {
                     int slotId1 = playerIn.inventory.getSlotFor(reportItemStackHas);
                     int slotId2 = playerIn.inventory.getFirstEmptyStack();
                     String[] resources = getDimResources(playerIn);
-
-                    double[] densityPct = helpers.getResourceDensityPct(playerIn, playerIn.chunkCoordX, playerIn.chunkCoordZ);
+                    String[] densityPctStr = helpers.getResourceDensityPctString(playerIn, playerIn.chunkCoordX, playerIn.chunkCoordZ);
+                    String[] resourceDensityArray = concatArrayIndexes(resources, densityPctStr);
                     String worldName = playerIn.world.getDimensionKey().getLocation().toString(); // minecraft:overworld
                     String chunkCords = "[" + playerIn.chunkCoordX+"x,"+playerIn.chunkCoordZ + "z]"; // [10x,4z]
 
-                    CompoundNBT nbtResourceWorld = new CompoundNBT();
-                    CompoundNBT nbtResourceChunk = new CompoundNBT();
-                    CompoundNBT nbtResourceName = new CompoundNBT();
-                    CompoundNBT nbtResourceDensity = new CompoundNBT();
-
                     playerIn.inventory.add(slotId2, reportItemStackNew);
-
-                    nbtResourceWorld.putString(TantalusUnchained.MOD_ID + ":resource_world" , worldName);
-                    playerIn.inventory.getStackInSlot(slotId2).setTag(nbtResourceWorld);
-
-                    nbtResourceChunk.putString(TantalusUnchained.MOD_ID + ":resource_chunk" , chunkCords);
-                    playerIn.inventory.getStackInSlot(slotId2).setTag(nbtResourceChunk);
-
-                    for (int i=0; i<resources.length ; i++) {
-                        nbtResourceName.putString(TantalusUnchained.MOD_ID + ":resource_name", resources[i]);
-                        playerIn.inventory.getStackInSlot(slotId2).setTag(nbtResourceName);
+                    CompoundNBT nbt = new CompoundNBT();
+                    nbt.putString(TantalusUnchained.MOD_SHORT_NAME + ":world" , worldName);
+                    nbt.putString(TantalusUnchained.MOD_SHORT_NAME + ":chunk" , chunkCords);
+                    for (int i=0; i<resourceDensityArray.length ; i++) {
+                        nbt.putString(TantalusUnchained.MOD_SHORT_NAME + ":resource_density"+i, resourceDensityArray[i]);
                     }
-
-                    for (int i=0; i<resources.length ; i++) {
-                        nbtResourceDensity.putDouble(TantalusUnchained.MOD_ID + ":resource_density", densityPct[i]);
-                        playerIn.inventory.getStackInSlot(slotId2).setTag(nbtResourceDensity);
-                    }
-
-                    String disName = worldName +" Chunk [" + playerIn.chunkCoordX + "x," + playerIn.chunkCoordZ +"z]";
+                    playerIn.inventory.getStackInSlot(slotId2).setTag(nbt);
+                    String disName = worldName +" Chunk [" + playerIn.chunkCoordX + "x," + playerIn.chunkCoordZ +"z] scan";
                     playerIn.inventory.getStackInSlot(slotId2).setDisplayName(new StringTextComponent(disName));
                     playerIn.inventory.getStackInSlot(slotId1).shrink(1);
+                    LOGGER.debug("resources array...");
+                    LOGGER.debug(Arrays.toString(resources));
+                    LOGGER.debug("densityPctStr array...");
+                    LOGGER.debug(Arrays.toString(densityPctStr));
+                    LOGGER.debug("resourceDensityArray array...");
+                    LOGGER.debug(Arrays.toString(resourceDensityArray));
                 }
                 return new ActionResult<ItemStack>(ActionResultType.SUCCESS, playerIn.getHeldItem(handIn));
             }

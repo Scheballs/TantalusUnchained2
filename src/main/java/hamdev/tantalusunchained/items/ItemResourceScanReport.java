@@ -14,6 +14,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import org.lwjgl.glfw.GLFW;
 
 import javax.annotation.Nullable;
+import java.util.Comparator;
 import java.util.List;
 
 public class ItemResourceScanReport extends Item
@@ -22,17 +23,27 @@ public class ItemResourceScanReport extends Item
     }
 
     @Override
-    public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
+    public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
+    {
         tooltip.add(new StringTextComponent("Hold"+"\u00A7e" + " SHIFT " + "\u00A77" + "for more info" ));
-
-        if(isHoldingShift()) {
-            if (stack.hasTag() && stack.getTag().contains(TantalusUnchained.MOD_ID + ":resource_")) {
-                    tooltip.add(new StringTextComponent("World: "   + stack.getTag().getString(TantalusUnchained.MOD_ID +":resource_world"  )));
-                    tooltip.add(new StringTextComponent("Chunk: "   + stack.getTag().getString(TantalusUnchained.MOD_ID +":resource_chunk"  )));
-                    tooltip.add(new StringTextComponent("Resource: "+ stack.getTag().getString(TantalusUnchained.MOD_ID +":resource_name"   )));
-                    tooltip.add(new StringTextComponent("Density: " + stack.getTag().getString(TantalusUnchained.MOD_ID +":resource_density")));
+        //tooltip.add(new StringTextComponent("Place me in your inventory so the Omni Tool can write a scan report on me"));
+        if(isHoldingShift())
+        {
+            if (stack.hasTag() )
+            {
+                for(String nbtKey : stack.getTag().keySet())
+                {
+                    // Do things with stack.getTag().get(nbtKey) for example :)
+                    if (stack.getTag().getString(nbtKey).equals(""))
+                    {
+                        double nbtValueD = stack.getTag().getDouble(nbtKey);
+                        String nbtValue = String.format("%,.0f", nbtValueD * 100);
+                        tooltip.add(new StringTextComponent(nbtKey + " " + nbtValue));
+                    }
+                    String nbtValueS = stack.getTag().getString(nbtKey);
+                    tooltip.add(new StringTextComponent(nbtKey + " " + nbtValueS));
+                }
             }
-            tooltip.add(new StringTextComponent("Place me in your inventory so the Omni Tool can write a scan report on me"));
         }
     }
     //NOTE: just a helper method I have pulled out of the Keyboard helper

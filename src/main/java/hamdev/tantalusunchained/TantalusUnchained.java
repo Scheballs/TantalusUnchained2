@@ -32,7 +32,7 @@ import java.util.stream.Collectors;
 public class TantalusUnchained
 {
     public static final String MOD_ID = "tantalusunchained";
-// I want to change the mod id
+    // I want to change the mod id
     public static final String MOD_NAME = "Tantalus Unchained";
     public static final String MOD_SHORT_NAME = "TU Chain";
     // Directly reference a log4j logger.

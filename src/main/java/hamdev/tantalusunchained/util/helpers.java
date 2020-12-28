@@ -1,9 +1,9 @@
 package hamdev.tantalusunchained.util;
 
-import com.ibm.icu.number.Precision;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.text.StringTextComponent;
-import net.minecraft.world.World;
+import org.apache.commons.lang3.ArrayUtils;
+
 import java.time.LocalDate;
 import java.util.Random;
 
@@ -102,16 +102,30 @@ public class helpers {
         return densityPct;
         }
 
-    public static double[] getResourceDensityYield(PlayerEntity player, int x, int z) {
+    public static String[] getResourceDensityPctString(PlayerEntity player, int x, int z) {
         String[] resources = getDimResources(player);
         double density;
-        double[] densityYield = new double[resources.length];
+        String[] densityPctStr = new String[resources.length];
         for(int i = 0; i < resources.length; i++) {
             density = randomGenerator(i, x, z, 0.01, 2.0);
             //String densityPct = String.format("%,.0f", density * 100);
             //String densityYield = String.format("%,.0f", density * 300);
-            densityYield[i] = roundPlaces(density, 4) * 300;
+            densityPctStr[i] = String.format("%,.0f", density * 100);
         }
-        return densityYield;
+        return densityPctStr;
+    }
+    // Function to concat one array onto the end of another
+    public static String[] concatArray(String[] first, String[] second)
+    {
+        return ArrayUtils.addAll(first, second);
+    }
+    // Function to combine each index of two arrays into one new index of a new array
+    public static String[] concatArrayIndexes(String[] first, String[] second) {
+        String[] third = new String[first.length];
+        //int index = first.length;
+        for (int i = 0; i < first.length; i++) {
+            third[i] = first[i]+" "+second[i];
+        }
+        return third;
     }
 }
