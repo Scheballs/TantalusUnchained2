@@ -3,8 +3,11 @@ package hamdev.tantalusunchained.util;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.text.StringTextComponent;
 import org.apache.commons.lang3.ArrayUtils;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.time.LocalDate;
+import java.util.Arrays;
 import java.util.Random;
 
 import static net.minecraft.util.math.MathHelper.abs;
@@ -12,23 +15,25 @@ import static net.minecraft.util.math.MathHelper.floor;
 
 public class helpers {
 
+    private static final Logger LOGGER = LogManager.getLogger();
+
     public static String[] resourcesOverworld() {
-        return new String[]{"\u00a72Hard Water", "\u00a72Organic Compounds", "\u00a72Autotrophs", "\u00a72Microbes", "\u00a72Phytoplankton", "\u00a72Complex Lifeforms"};
+        return new String[]{"\uA0072Autotrophs", "\uA0072Hard Water", "\uA0072Organic Compounds", "\uA0072Microbes", "\uA0072Phytoplankton", "\uA0072Complex Lifeforms"};
     }
     public static String[] resourcesTheNether() {
-        return new String[]{"\u00a7cBase Metals", "\u00a7cHeavy Metals", "\u00a7cCrystalline Solids", "\u00a7cLiquid Hot Magma", "\u00a7cRare Metals"};
+        return new String[]{"\uA0074Base Metals", "\uA0074Crystalline Solids", "\uA0074Ionic Solutions", "\uA0074Heavy Metals", "\uA0074Liquid Hot Magma", "\uA0074Rare Metals"};
     }
     public static String[] resourcesTheEnd() {
-        return new String[]{"\u00a7bAtmospheric Gas", "\u00a7bIonized Gas", "\u00a7bSuspended Plasma", "\u00a7bUnstable Gas"};
+        return new String[]{"\uA0073Atmospheric Gas", "\uA0073Ionized Gas", "\uA0073Suspended Plasma", "\uA0073Unstable Gas"};
     }
 
     public static String[] getDimResources(PlayerEntity player) {
         String[] resources;
-        String worldName = player.world.getDimensionKey().getLocation().toString();
+        String worldName = player.world.getDimensionKey().getLocation().getPath();
         switch(worldName) {
-            case "minecraft:the_end":resources = resourcesTheEnd();break;
-            case "minecraft:the_nether":resources = resourcesTheNether();break;
-            default:resources = resourcesOverworld();break; //"minecraft:overworld"
+            case "the_end":resources = resourcesTheEnd();break;
+            case "the_nether":resources = resourcesTheNether();break;
+            default :resources = resourcesOverworld();break; //"overworld"
         }
         return resources;
     }
@@ -77,7 +82,6 @@ public class helpers {
             density = randomGenerator(i, x, z, Config.MIN_RESOURCE_DENSITY.get(), Config.MAX_RESOURCE_DENSITY.get());
             String densityPct = String.format("%,.0f", density * 100);
             String densityUnitsPerHour = String.format("%,.0f", density * Config.BASE_RESOURCE_YIELD.get());
-
             player.sendMessage(new StringTextComponent(resources[i] +"\u00a77: "+ densityPct + "% \u00a77yields "
                     + densityUnitsPerHour +"\u00a77 units per hour" ) ,player.getUniqueID());
         }
@@ -89,28 +93,13 @@ public class helpers {
         That way you can call the getting of the values inside the OmniTool RightClick Method and save it to the
         "Resource Scan Report"
     */
-    public static double[] getResourceDensityPct(PlayerEntity player, int x, int z) {
-        String[] resources = getDimResources(player);
-        double density;
-        double[] densityPct = new double[resources.length];
-        for(int i = 0; i < resources.length; i++) {
-            density = randomGenerator(i, x, z, 0.01, 2.0);
-            //String densityPct = String.format("%,.0f", density * 100);
-            //String densityYield = String.format("%,.0f", density * 300);
-            densityPct[i] = roundPlaces(density, 4) * 100;
-            }
-        return densityPct;
-        }
-
     public static String[] getResourceDensityPctString(PlayerEntity player, int x, int z) {
         String[] resources = getDimResources(player);
         double density;
         String[] densityPctStr = new String[resources.length];
         for(int i = 0; i < resources.length; i++) {
-            density = randomGenerator(i, x, z, 0.01, 2.0);
-            //String densityPct = String.format("%,.0f", density * 100);
-            //String densityYield = String.format("%,.0f", density * 300);
-            densityPctStr[i] = String.format("%,.0f", density * 100);
+            density = randomGenerator(i, x, z, Config.MIN_RESOURCE_DENSITY.get(), Config.MAX_RESOURCE_DENSITY.get());
+            densityPctStr[i] = String.format("%,.0f", density * 100)+"%";
         }
         return densityPctStr;
     }
@@ -120,11 +109,12 @@ public class helpers {
         return ArrayUtils.addAll(first, second);
     }
     // Function to combine each index of two arrays into one new index of a new array
+    // For example, [Base Metals, Hard Water] + [23%,178%] = [Base Metals: 23% , Hard Water: 178%]
     public static String[] concatArrayIndexes(String[] first, String[] second) {
         String[] third = new String[first.length];
         //int index = first.length;
         for (int i = 0; i < first.length; i++) {
-            third[i] = first[i]+" "+second[i];
+            third[i] = first[i]+": "+second[i];
         }
         return third;
     }

@@ -1,43 +1,65 @@
 {
   "itemGroup.creative_tab": "Tantalus Unchained",
 
-  "block.tantalusunchained.machine_block_tier1": "Machine Block Tier 1",
-  "block.tantalusunchained.machine_block_tier2": "Machine Block Tier 2",
-  "block.tantalusunchained.machine_block_tier3": "Machine Block Tier 3",
-  "block.tantalusunchained.machine_block_tier4": "Machine Block Tier 4",
-  "block.tantalusunchained.machine_block_tier5": "Machine Block Tier 5",
-  "block.tantalusunchained.machine_block_tier6": "Machine Block Tier 6",
-  "block.tantalusunchained.machine_block_tier7": "Machine Block Tier 7",
-  "block.tantalusunchained.machine_block_tier8": "Machine Block Tier 8",
+  "block.tantalusunchained.block_resource_harvester": "§9Resource Harvester",
+  "block.tantalusunchained.block_processing_factory": "§9Resource Processing Factory",
+  "block.tantalusunchained.block_refinement_factory": "§9Processing Refinement Factory",
+  "block.tantalusunchained.block_specialization_factory": "§9Refinement Specialization Factory",
+  "block.tantalusunchained.block_component_factory": "§9Advanced Component Factory",
 
-  "block.tantalusunchained.block_tantalum": "Tantalum Block",
-  "block.tantalusunchained.ore_tantalum": "Tantalum Ore",
-  "block.tantalusunchained.block_resource_harvester": "\u00A72Resource Harvester",
+  "block.tantalusunchained.block_storage_silo": "§9Storage Silo",
+  "block.tantalusunchained.block_command_and_control_center": "§9Command and Control Center",
+  "block.tantalusunchained.block_microwave_solar_plant": "§9Microwave Solar Power Plant",
+  "block.tantalusunchained.block_ai_compute_node": "§9AI Compute Node",
+  "block.tantalusunchained.block_space_elevator": "§9Space Elevator",
 
-  "item.tantalusunchained.guide_book": "\u00A72Guide Book",
-  "item.tantalusunchained.omni_tool": "\u00A72Omni Tool",
+  "block.tantalusunchained.machine_block_tier1": "Machine Block Mk I",
+  "block.tantalusunchained.machine_block_tier2": "Machine Block Mk II",
+  "block.tantalusunchained.machine_block_tier3": "Machine Block Mk III",
+  "block.tantalusunchained.machine_block_tier4": "Machine Block Mk IV",
+  "block.tantalusunchained.machine_block_tier5": "Machine Block Mk V",
+  "block.tantalusunchained.machine_block_tier6": "Machine Block Mk VI",
+  "block.tantalusunchained.machine_block_tier7": "Machine Block Mk VII",
+  "block.tantalusunchained.machine_block_tier8": "Machine Block Mk VIII",
+  "block.tantalusunchained.machine_block_tier9": "Machine Block Mk IX",
+  "block.tantalusunchained.machine_block_tier10": "Machine Block Mk X",
 
-  "item.tantalusunchained.item_resource_scan_report": "Blank Resource Scan Report",
-  "item.tantalusunchained.ingot_tantalum": "Tantalum Ingot",
-  "item.tantalusunchained.nugget_tantalum": "Tantalum Nugget",
-  "item.tantalusunchained.dust_tantalum": "Tantalum Dust",
+  "block.tantalusunchained.block_tantalum": "§9Tantalum Block",
+  "block.tantalusunchained.ore_tantalum": "§9Tantalum Ore",
 
-  "item.tantalusunchained.t1_complex_organism": "\u00A72Complex Organism",
-  "item.tantalusunchained.t1_hard_water": "\u00A72Hard Water",
-  "item.tantalusunchained.t1_microbe": "\u00A72Microbe",
-  "item.tantalusunchained.t1_phytoplankton": "\u00A72Phytoplankton",
-  "item.tantalusunchained.t1_organic_compound": "\u00A72Organic Compound",
-  "item.tantalusunchained.t1_autotrophs": "\u00A72Autotrophs",
+  "item.tantalusunchained.guide_book": "§2Guide Book",
+  "item.tantalusunchained.omni_tool": "§2Omni Tool",
 
-  "item.tantalusunchained.t1_atmospheric_gas": "\u00A7cAtmospheric Gas",
-  "item.tantalusunchained.t1_crystalline_solids": "\u00A7cCrystalline Solids",
-  "item.tantalusunchained.t1_ionic_solutions": "\u00A7cIonic Solutions",
-  "item.tantalusunchained.t1_liquid_hot_magma": "\u00A7cLiquid Hot Magma",
-  "item.tantalusunchained.t1_heavy_metals": "\u00A7cHeavy Metals",
+  "item.tantalusunchained.item_resource_scan_report_blank": "§9Blank Resource Scan Report",
+  "item.tantalusunchained.item_resource_scan_report": "§9Resource Scan Report",
+  "item.tantalusunchained.ingot_tantalum": "§9Tantalum Ingot",
+  "item.tantalusunchained.nugget_tantalum": "§9Tantalum Nugget",
+  "item.tantalusunchained.dust_tantalum": "§9Tantalum Dust",
 
-  "item.tantalusunchained.t1_suspended_plasma": "\u00A7bSuspended Plasma",
-  "item.tantalusunchained.t1_rare_metals": "\u00A7bRare Metals",
-  "item.tantalusunchained.t1_base_metals": "\u00A7bBase Metals",
-  "item.tantalusunchained.t1_unstable_gas": "\u00A7bUnstable Gas"
+  "item.tantalusunchained.t1_autotrophs": "§2Autotrophs",
+  "item.tantalusunchained.t1_complex_lifeforms": "§2Complex Lifeforms",
+  "item.tantalusunchained.t1_hard_water": "§2Hard Water",
+  "item.tantalusunchained.t1_microbes": "§2Microbes",
+  "item.tantalusunchained.t1_organic_compounds": "§2Organic Compounds",
+  "item.tantalusunchained.t1_phytoplankton": "§2Phytoplankton",
+
+  "item.tantalusunchained.t1_base_metals": "§4Base Metals",
+  "item.tantalusunchained.t1_crystalline_solids": "§4Crystalline Solids",
+  "item.tantalusunchained.t1_heavy_metals": "§4Heavy Metals",
+  "item.tantalusunchained.t1_ionic_solutions": "§4Ionic Solutions",
+  "item.tantalusunchained.t1_liquid_hot_magma": "§4Liquid Hot Magma",
+
+  "item.tantalusunchained.t1_atmospheric_gas": "§3Atmospheric Gas",
+  "item.tantalusunchained.t1_rare_metals": "§3Rare Metals",
+  "item.tantalusunchained.t1_suspended_plasma": "§3Suspended Plasma",
+  "item.tantalusunchained.t1_unstable_gas": "§3Unstable Gas",
+
+  "item.tantalusunchained.t2_toxic_metals": "Toxic Metals",
+
+  "item.tantalusunchained.t3_enriched_uranium": "Enriched Uranium",
+
+  "item.tantalusunchained.t4_memory_crystal": "Memory Crystal",
+
+  "item.tantalusunchained.t5_adaptive_power_core": "Adaptive Power Core"
 
 }

@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "tantalusunchained:item/item_resource_scan_report_blank"
+  }
+}

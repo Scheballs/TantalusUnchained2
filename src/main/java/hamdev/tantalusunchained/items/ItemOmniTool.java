@@ -48,7 +48,7 @@ public class ItemOmniTool extends Item {
                 //TODO: Create a 1 to 3 second delay between chat messages somehow
                 helpers.densityScanComplete(playerIn,x,z);
 
-                ItemStack reportItemStackHas = new ItemStack(ModItems.ITEM_RESOURCE_SCAN_REPORT.get());
+                ItemStack reportItemStackHas = new ItemStack(ModItems.ITEM_RESOURCE_SCAN_REPORT_BLANK.get());
                 ItemStack reportItemStackNew = new ItemStack(ModItems.ITEM_RESOURCE_SCAN_REPORT.get());
                 // Checks for the Item Resource Scan Report
                 if(playerIn.inventory.hasItemStack(reportItemStackHas) && !reportItemStackHas.hasTag()
@@ -57,20 +57,20 @@ public class ItemOmniTool extends Item {
                     int slotId1 = playerIn.inventory.getSlotFor(reportItemStackHas);
                     int slotId2 = playerIn.inventory.getFirstEmptyStack();
                     String[] resources = getDimResources(playerIn);
-                    String[] densityPctStr = helpers.getResourceDensityPctString(playerIn, playerIn.chunkCoordX, playerIn.chunkCoordZ);
+                    String[] densityPctStr = helpers.getResourceDensityPctString(playerIn, x, z);
                     String[] resourceDensityArray = concatArrayIndexes(resources, densityPctStr);
-                    String worldName = playerIn.world.getDimensionKey().getLocation().toString(); // minecraft:overworld
-                    String chunkCords = "[" + playerIn.chunkCoordX+"x,"+playerIn.chunkCoordZ + "z]"; // [10x,4z]
+                    String worldName = playerIn.world.getDimensionKey().getLocation().getPath(); // Overworld
+                    String chunkCords = "[" + x +"x,"+ z + "z]"; // [10x,4z]
 
                     playerIn.inventory.add(slotId2, reportItemStackNew);
                     CompoundNBT nbt = new CompoundNBT();
-                    nbt.putString(TantalusUnchained.MOD_SHORT_NAME + ":world" , worldName);
-                    nbt.putString(TantalusUnchained.MOD_SHORT_NAME + ":chunk" , chunkCords);
+                    nbt.putString("World" , worldName);
+                    nbt.putString("Chunk" , chunkCords);
                     for (int i=0; i<resourceDensityArray.length ; i++) {
-                        nbt.putString(TantalusUnchained.MOD_SHORT_NAME + ":resource_density"+i, resourceDensityArray[i]);
+                        nbt.putString("Density"+i, resourceDensityArray[i]);
                     }
                     playerIn.inventory.getStackInSlot(slotId2).setTag(nbt);
-                    String disName = worldName +" Chunk [" + playerIn.chunkCoordX + "x," + playerIn.chunkCoordZ +"z] scan";
+                    String disName = worldName +" Chunk [" + x + "x," + z +"z] scan";
                     playerIn.inventory.getStackInSlot(slotId2).setDisplayName(new StringTextComponent(disName));
                     playerIn.inventory.getStackInSlot(slotId1).shrink(1);
                     LOGGER.debug("resources array...");

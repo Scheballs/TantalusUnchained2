@@ -25,7 +25,7 @@ public class ItemResourceScanReport extends Item
     @Override
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
     {
-        tooltip.add(new StringTextComponent("Hold"+"\u00A7e" + " SHIFT " + "\u00A77" + "for more info" ));
+        tooltip.add(new StringTextComponent("<Hold SHIFT>" ));
         //tooltip.add(new StringTextComponent("Place me in your inventory so the Omni Tool can write a scan report on me"));
         if(isHoldingShift())
         {
@@ -33,15 +33,8 @@ public class ItemResourceScanReport extends Item
             {
                 for(String nbtKey : stack.getTag().keySet())
                 {
-                    // Do things with stack.getTag().get(nbtKey) for example :)
-                    if (stack.getTag().getString(nbtKey).equals(""))
-                    {
-                        double nbtValueD = stack.getTag().getDouble(nbtKey);
-                        String nbtValue = String.format("%,.0f", nbtValueD * 100);
-                        tooltip.add(new StringTextComponent(nbtKey + " " + nbtValue));
-                    }
-                    String nbtValueS = stack.getTag().getString(nbtKey);
-                    tooltip.add(new StringTextComponent(nbtKey + " " + nbtValueS));
+                String nbtValueS = stack.getTag().getString(nbtKey);
+                tooltip.add(new StringTextComponent(nbtKey + " " + nbtValueS));
                 }
             }
         }

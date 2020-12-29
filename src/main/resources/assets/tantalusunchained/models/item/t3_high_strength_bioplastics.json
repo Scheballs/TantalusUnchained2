@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "tantalusunchained:item/tier3/t3_high_strength_bioplastics"
+  }
+}

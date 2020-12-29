@@ -34,13 +34,13 @@ public class TantalusUnchained
     public static final String MOD_ID = "tantalusunchained";
     // I want to change the mod id
     public static final String MOD_NAME = "Tantalus Unchained";
-    public static final String MOD_SHORT_NAME = "TU Chain";
+    public static final String MOD_SHORT_NAME = "TUChain";
     // Directly reference a log4j logger.
     private static final Logger LOGGER = LogManager.getLogger();
     public static final ItemGroup CREATIVE_TAB = new ItemGroup("creative_tab") {
         @Override
         public ItemStack createIcon() {
-            return new ItemStack(ModItems.DUST_TANTALUM.get());
+            return new ItemStack(ModItems.OMNI_TOOL.get());
         }
     };
 
