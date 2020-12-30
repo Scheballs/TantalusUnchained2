@@ -3,8 +3,7 @@
 
 # About
 Tantalus Unchained, or T-Chain as its known on the street, is a Minecraft Forge mod derived from [Planetary Interaction](https://www.google.com/search?safe=active&q=eve+online+planetary+interaction) in [Eve Online](https://www.eveonline.com/) and popular factory simulators such as [Factorio](https://www.factorio.com/) and [Satisfactory](https://www.satisfactorygame.com/).
-T-Chain specializes in setting up and maintaining complex [supply chains](https://hanns.io/pi/) of collecting raw resources, processing them into more advanced forms for later use in the mod.
-
+T-Chain specializes in setting up and maintaining complex [supply chains](https://hanns.io/pi/) of collecting raw resources, processing them into more advanced forms for later use in the mod. [TODO: Make visual wiki like this one](https://fazenda.github.io/)
 # Modpacks, websites, reviews, or anything else
 This mod is poorly copyrighted by HAMCraft Dev for the private use of our audience. Any other use of this mod or any pictures, descriptions, or accounts of mod gameplay without HAMCraft Dev's consent is not just allowed but highly encouraged. Go Nuts!
 
