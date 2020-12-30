@@ -1,15 +1,15 @@
-package hamdev.tantalusunchained.items;
+package hamdev.tantalusunchained.common.items;
 
-import hamdev.tantalusunchained.TantalusUnchained;
+import hamdev.tantalusunchained.common.TantalusUnchained;
 import hamdev.tantalusunchained.util.Registration;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.RegistryObject;
 
-public class ModItems {
+public class TUChainItems {
     //Complex Items
     public static final RegistryObject<ItemOmniTool>           OMNI_TOOL                       = Registration.ITEMS.register("omni_tool"                      , ItemOmniTool::new);
-    public static final RegistryObject<ItemResourceScanReport> ITEM_RESOURCE_SCAN_REPORT       = Registration.ITEMS.register("item_resource_scan_report"      , ItemResourceScanReport::new);
     public static final RegistryObject<ItemResourceScanReport> ITEM_RESOURCE_SCAN_REPORT_BLANK = Registration.ITEMS.register("item_resource_scan_report_blank", ItemResourceScanReport::new);
+    public static final RegistryObject<ItemResourceScanReport> ITEM_RESOURCE_SCAN_REPORT       = Registration.ITEMS.register("item_resource_scan_report"      , ItemResourceScanReport::new);
 
     //Simple Items
     public static final RegistryObject<Item> INGOT_TANTALUM  = Registration.ITEMS.register("ingot_tantalum" , ()-> new Item(new Item.Properties().group(TantalusUnchained.CREATIVE_TAB)));

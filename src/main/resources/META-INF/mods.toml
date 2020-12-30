@@ -3,15 +3,15 @@ loaderVersion="[35,)"
 license="MIT"
 
 [[mods]]
-  issueTrackerURL="https://github.com/Scheballs/TantalusUnchained/issues"
+  issueTrackerURL="https://github.com/Scheballs/TantalusUnchained2/issues"
   modId="tantalusunchained"
   version="${file.jarVersion}"
   displayName="Tantalus Unchained"
   # updateJSONURL="http://myurl.me/"
-  displayURL="https://github.com/Scheballs/TantalusUnchained/wiki"
+  displayURL="https://github.com/Scheballs/TantalusUnchained2/wiki"
   logoFile="tchain_logo.png"
   authors="Scheballs"
-  credits="tlannigan and Trakaa, Oh and I'd like to thank Jesus, Baby Jesus, Sweet Cream Butter Jesus and Cheesus Christ."
+  credits="tlannigan, Trakaa and Kaupenjoe, Oh and I'd like to thank Jesus, Baby Jesus, Sweet Cream Butter Jesus and Cheesus Christ."
   description='''
    Backstory
   While exploring the overworld you come across some mysterious artifacts which appear to have decayed over the years. Each artifact holds similar markings. Making the connection, you begin to collect these artifacts and when you piece them together, they combine in a spark of light. This artifact mysteriously powers up drawing power from the sky. The tablet emits a slight glow in your hand. You can begin to make out building plans for what appears to be some sort of planetary scale resource harvester. There are schematics for extracting resources from the various worlds. The tablet also describes how to combine them into more complex materials.

@@ -1,6 +1,6 @@
 package hamdev.tantalusunchained.util;
 
-import hamdev.tantalusunchained.TantalusUnchained;
+import hamdev.tantalusunchained.common.TantalusUnchained;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;

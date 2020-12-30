@@ -1,6 +1,6 @@
-package hamdev.tantalusunchained.block;
+package hamdev.tantalusunchained.common.block;
 
-import hamdev.tantalusunchained.TantalusUnchained;
+import hamdev.tantalusunchained.common.TantalusUnchained;
 import hamdev.tantalusunchained.util.Registration;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
@@ -13,13 +13,13 @@ import net.minecraftforge.fml.RegistryObject;
 
 import java.util.function.Supplier;
 
-public class ModBlocks {
+public class TUChainBlocks {
 
-    //Storage Blocks
-    public static final RegistryObject<Block> BLOCK_TANTALUM      = register( "block_tantalum"     ,() -> new Block(AbstractBlock.Properties.create(Material.IRON).hardnessAndResistance( 5f, 10f).sound(SoundType.METAL)));
     //Ore Blocks
     public static final RegistryObject<Block> ORE_TANTALUM        = register( "ore_tantalum"       ,() -> new OreBlock(AbstractBlock.Properties.create(Material.ROCK).setRequiresTool().hardnessAndResistance(3.0F, 3.0F)));
-    //Machine Blocks
+    //Storage Blocks
+    public static final RegistryObject<Block> BLOCK_TANTALUM      = register( "block_tantalum"     ,() -> new Block(AbstractBlock.Properties.create(Material.IRON).hardnessAndResistance( 5f, 10f).sound(SoundType.METAL)));
+   //Machine Blocks
     public static final RegistryObject<Block> MACHINE_BLOCK_TIER1 = register( "machine_block_tier1",() -> new Block(AbstractBlock.Properties.create(Material.IRON).hardnessAndResistance( 3f, 10f).sound(SoundType.METAL)));
     public static final RegistryObject<Block> MACHINE_BLOCK_TIER2 = register( "machine_block_tier2",() -> new Block(AbstractBlock.Properties.create(Material.IRON).hardnessAndResistance( 3f, 10f).sound(SoundType.METAL)));
     public static final RegistryObject<Block> MACHINE_BLOCK_TIER3 = register( "machine_block_tier3",() -> new Block(AbstractBlock.Properties.create(Material.IRON).hardnessAndResistance( 3f, 10f).sound(SoundType.METAL)));

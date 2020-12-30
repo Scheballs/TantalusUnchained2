@@ -1,0 +1,12 @@
+{
+  "parent": "tantalusunchained:block/machine",
+  "textures": {
+    "sides": "tantalusunchained:block/energized_smelter/side",
+    "front": "tantalusunchained:block/energized_smelter/front",
+    "west": "tantalusunchained:block/energized_smelter/side",
+    "east": "tantalusunchained:block/energized_smelter/side",
+    "south": "tantalusunchained:block/energized_smelter/back",
+    "up": "tantalusunchained:block/energized_smelter/top",
+    "down": "tantalusunchained:block/energized_smelter/bottom"
+  }
+}
