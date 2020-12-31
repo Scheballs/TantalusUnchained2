@@ -22,7 +22,6 @@ public class TUChainLanguageProvider extends LanguageProvider {
                 addItem(TUChainItems.INGOT_TANTALUM, "Tantalum Ingot");
                 addItem(TUChainItems.DUST_TANTALUM, "Tantalum Dust");
                 addItem(TUChainItems.NUGGET_TANTALUM, "Tantalum Nugget");
-                addItem(TUChainItems.ITEM_RESOURCE_SCAN_REPORT, "Resource Scan Report");
                 addItem(TUChainItems.T1_AUTOTROPHS, "Autotrophs");
                 addItem(TUChainItems.T1_COMPLEX_LIFEFORMS, "Complex_Lifeforms");
                 addItem(TUChainItems.T1_HARD_WATER, "Hard_Water");
