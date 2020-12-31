@@ -16,11 +16,13 @@ import org.lwjgl.glfw.GLFW;
 import javax.annotation.Nullable;
 import java.util.List;
 
+import static hamdev.tantalusunchained.common.util.helpers.isHoldingShift;
+
 public class ItemResourceScanReportBlank extends Item
 {
     public ItemResourceScanReportBlank()
     {
-        super(new Properties().maxStackSize(64).group(TantalusUnchained.CREATIVE_TAB));
+        super(new Item.Properties().maxStackSize(64).group(TantalusUnchained.CREATIVE_TAB));
     }
 
     @Override
@@ -30,22 +32,7 @@ public class ItemResourceScanReportBlank extends Item
         //TODO: Need to make the hold SHIFT tooltip go away while holding shift.
         if(isHoldingShift())
         {
-            if (stack.hasTag() )
-            {
-                for(String nbtKey : stack.getTag().keySet())
-                {
-                String nbtValueS = stack.getTag().getString(nbtKey);
-                tooltip.add(new StringTextComponent(nbtValueS));
-                }
-            }
             tooltip.add(new StringTextComponent("Place me in your inventory so the Omni Tool can write a scan report on me"));
         }
-    }
-
-    //NOTE: just a helper method I have pulled out of the Keyboard helper
-    @OnlyIn(Dist.CLIENT)
-    public static boolean isHoldingShift() {
-        return InputMappings.isKeyDown(Minecraft.getInstance().getMainWindow().getHandle(),
-                GLFW.GLFW_KEY_LEFT_SHIFT);
     }
 }

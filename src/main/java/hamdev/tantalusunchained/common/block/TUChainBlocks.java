@@ -1,7 +1,7 @@
 package hamdev.tantalusunchained.common.block;
 
 import hamdev.tantalusunchained.common.TantalusUnchained;
-import hamdev.tantalusunchained.util.Registration;
+import hamdev.tantalusunchained.common.items.TUChainItems;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.OreBlock;
@@ -10,11 +10,23 @@ import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.RegistryObject;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.function.Supplier;
 
 public class TUChainBlocks {
 
+    public static final DeferredRegister<Block> BLOCKS
+            = DeferredRegister.create(ForgeRegistries.BLOCKS, TantalusUnchained.MOD_ID);
+
+    private static <T extends Block>RegistryObject<T> register(String name, Supplier<T> block)
+    {
+        RegistryObject<T> toReturn = TUChainBlocks.BLOCKS.register(name, block);
+        TUChainItems.ITEMS.register(name, () -> new BlockItem(toReturn.get(),
+                new Item.Properties().group(TantalusUnchained.CREATIVE_TAB)) );
+        return toReturn;
+    }
     //Ore Blocks
     public static final RegistryObject<Block> ORE_TANTALUM        = register( "ore_tantalum"       ,() -> new OreBlock(AbstractBlock.Properties.create(Material.ROCK).setRequiresTool().hardnessAndResistance(3.0F, 3.0F)));
     //Storage Blocks
@@ -46,11 +58,4 @@ Advanced Component Factory
  */
     public static void register() { }
 
-    private static <T extends Block>RegistryObject<T> register(String name, Supplier<T> block)
-    {
-        RegistryObject<T> toReturn = Registration.BLOCKS.register(name, block);
-        Registration.ITEMS.register(name, () -> new BlockItem(toReturn.get(),
-                new Item.Properties().group(TantalusUnchained.CREATIVE_TAB)) );
-        return toReturn;
-    }
 }

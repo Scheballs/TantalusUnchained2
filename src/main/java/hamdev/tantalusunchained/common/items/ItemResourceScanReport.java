@@ -16,11 +16,13 @@ import org.lwjgl.glfw.GLFW;
 import javax.annotation.Nullable;
 import java.util.List;
 
+import static hamdev.tantalusunchained.common.util.helpers.isHoldingShift;
+
 public class ItemResourceScanReport extends Item
 {
     public ItemResourceScanReport()
     {
-        super(new Item.Properties().maxStackSize(64).group(TantalusUnchained.CREATIVE_TAB));
+        super(new Item.Properties().maxStackSize(1).group(TantalusUnchained.CREATIVE_TAB));
     }
 
     @Override
@@ -40,12 +42,5 @@ public class ItemResourceScanReport extends Item
             }
             tooltip.add(new StringTextComponent("Place me in your inventory so the Omni Tool can write a scan report on me"));
         }
-    }
-
-    //NOTE: just a helper method I have pulled out of the Keyboard helper
-    @OnlyIn(Dist.CLIENT)
-    public static boolean isHoldingShift() {
-        return InputMappings.isKeyDown(Minecraft.getInstance().getMainWindow().getHandle(),
-                GLFW.GLFW_KEY_LEFT_SHIFT);
     }
 }

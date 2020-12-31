@@ -2,7 +2,7 @@
 package hamdev.tantalusunchained.common.items;
 
 import hamdev.tantalusunchained.common.TantalusUnchained;
-import hamdev.tantalusunchained.util.helpers;
+import hamdev.tantalusunchained.common.util.helpers;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -14,25 +14,19 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.world.World;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
-import java.util.Arrays;
 import java.util.List;
 
-import static hamdev.tantalusunchained.util.helpers.*;
+import static hamdev.tantalusunchained.common.util.helpers.*;
 
 public class ItemOmniTool extends Item {
     public ItemOmniTool() {
         super(new Item.Properties().group(TantalusUnchained.CREATIVE_TAB));
     }
 
-    private static final Logger LOGGER = LogManager.getLogger();
-
     @Override
     public void addInformation(ItemStack stack, World player, List<ITextComponent> list, ITooltipFlag flag) {
         super.addInformation(stack, player, list, flag);
-        list.add(new StringTextComponent("\u00a72Right Click to scan for resources"));
+        list.add(new StringTextComponent("\u00a72" + "Right Click to scan for resources"));
     }
 
     @Override
@@ -59,13 +53,11 @@ public class ItemOmniTool extends Item {
                     String[] resources = getDimResources(playerIn);
                     String[] densityPctStr = helpers.getResourceDensityPctString(playerIn, x, z);
                     String[] resourceDensityArray = concatArrayIndexes(resources, densityPctStr);
-                    String worldName = getDimName(playerIn); // ex. Overworld
+                    String worldName = getDimName(playerIn); // ex. The Nether
                     String chunkCords = "[" + playerIn.chunkCoordX +"x,"+ playerIn.chunkCoordZ + "z]"; // [10x,4z]
 
                     playerIn.inventory.add(slotId2, reportItemStackNew);
                     CompoundNBT nbt = new CompoundNBT();
-                    //nbt.putString("World" , worldName);
-                    //nbt.putString("Chunk" , chunkCords);
                     for (int i=0; i<resourceDensityArray.length ; i++) {
                         nbt.putString("Density"+i, resourceDensityArray[i]);
                     }
@@ -73,12 +65,6 @@ public class ItemOmniTool extends Item {
                     String disName = worldName +" Chunk [" + playerIn.chunkCoordX + "x," + playerIn.chunkCoordZ +"z] scan";
                     playerIn.inventory.getStackInSlot(slotId2).setDisplayName(new StringTextComponent(disName));
                     playerIn.inventory.getStackInSlot(slotId1).shrink(1);
-                    LOGGER.debug("resources array...");
-                    LOGGER.debug(Arrays.toString(resources));
-                    LOGGER.debug("densityPctStr array...");
-                    LOGGER.debug(Arrays.toString(densityPctStr));
-                    LOGGER.debug("resourceDensityArray array...");
-                    LOGGER.debug(Arrays.toString(resourceDensityArray));
                 }
                 return new ActionResult<ItemStack>(ActionResultType.SUCCESS, playerIn.getHeldItem(handIn));
             }

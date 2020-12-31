@@ -1,13 +1,17 @@
-package hamdev.tantalusunchained.util;
+package hamdev.tantalusunchained.common.util;
 
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.util.InputMappings;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.text.StringTextComponent;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.text.WordUtils;
+import org.lwjgl.glfw.GLFW;
 
 import java.time.LocalDate;
 import java.util.Random;
-
 import static net.minecraft.util.math.MathHelper.abs;
 import static net.minecraft.util.math.MathHelper.floor;
 
@@ -26,11 +30,12 @@ public class helpers {
     }
 
     public static String getDimName(PlayerEntity player)
-            //The goal here is to make the dimension path more user friendly
-            // So instead of "the_nether" I have "The Nether"
+    //The goal here is to make the dimension path more user friendly
+    // So instead of "the_nether" I have "The Nether"
     {
-        String dimName = WordUtils.capitalize(player.world.getDimensionKey().getLocation().getPath());
-        dimName = dimName.replace("_"," ");
+        String dimName = player.world.getDimensionKey().getLocation().getPath();
+        dimName = dimName.replaceAll("_"," ");
+        dimName = WordUtils.capitalize(dimName);
         return dimName;
     }
 
@@ -38,8 +43,8 @@ public class helpers {
         String[] resources;
         String worldName = getDimName(player);
         switch(worldName) {
-            case "The_end":resources = resourcesTheEnd();break;
-            case "The_nether":resources = resourcesTheNether();break;
+            case "The End":resources = resourcesTheEnd();break;
+            case "The Nether":resources = resourcesTheNether();break;
             default :resources = resourcesOverworld();break; //"Overworld"
         }
         return resources;
@@ -132,5 +137,11 @@ public class helpers {
             third[i] = first[i]+": "+second[i];
         }
         return third;
+    }
+    //NOTE: just a helper method I have pulled out of the Keyboard helper
+    @OnlyIn(Dist.CLIENT)
+    public static boolean isHoldingShift() {
+        return InputMappings.isKeyDown(Minecraft.getInstance().getMainWindow().getHandle(),
+                GLFW.GLFW_KEY_LEFT_SHIFT);
     }
 }
