@@ -51,6 +51,7 @@ public class TantalusUnchained
         PROXY.setup(mod, forge);
         addRegistries(mod);
         mod.addListener(this::commonSetup);
+        mod.addListener(this::gatherData);
 
         ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, Config.CLIENT_CONFIG);
         ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER, Config.SERVER_CONFIG);
