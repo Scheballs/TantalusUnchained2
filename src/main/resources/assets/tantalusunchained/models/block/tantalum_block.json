@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "tantalusunchained:block/ore_tantalum"
+    "all": "tantalusunchained:block/tantalum_block"
   }
 }

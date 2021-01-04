@@ -11,14 +11,13 @@ public class TUChainItems {
             = DeferredRegister.create(ForgeRegistries.ITEMS, TantalusUnchained.MOD_ID);
     //Complex Items
     public static final RegistryObject<ItemOmniTool>                OMNI_TOOL                       = TUChainItems.ITEMS.register("omni_tool"                      , ItemOmniTool::new);
-    public static final RegistryObject<ItemResourceScanReportBlank> ITEM_RESOURCE_SCAN_REPORT_BLANK = TUChainItems.ITEMS.register("item_resource_scan_report_blank", ItemResourceScanReportBlank::new);
-    public static final RegistryObject<ItemResourceScanReport>      ITEM_RESOURCE_SCAN_REPORT       = TUChainItems.ITEMS.register("item_resource_scan_report"      , ItemResourceScanReport::new);
+    public static final RegistryObject<ItemResourceScanReportBlank> RESOURCE_SCAN_REPORT_BLANK = TUChainItems.ITEMS.register("item_resource_scan_report_blank", ItemResourceScanReportBlank::new);
+    public static final RegistryObject<ItemResourceScanReport>      RESOURCE_SCAN_REPORT       = TUChainItems.ITEMS.register("item_resource_scan_report"      , ItemResourceScanReport::new);
 
     //Simple Items
-    public static final RegistryObject<Item> INGOT_TANTALUM  = TUChainItems.ITEMS.register("ingot_tantalum" , ()-> new Item(new Item.Properties().group(TantalusUnchained.CREATIVE_TAB)));
-    public static final RegistryObject<Item> DUST_TANTALUM   = TUChainItems.ITEMS.register("dust_tantalum"  , ()-> new Item(new Item.Properties().group(TantalusUnchained.CREATIVE_TAB)));
-    public static final RegistryObject<Item> NUGGET_TANTALUM = TUChainItems.ITEMS.register("nugget_tantalum", ()-> new Item(new Item.Properties().group(TantalusUnchained.CREATIVE_TAB)));
-
+    public static final RegistryObject<Item> TANTALUM = TUChainItems.ITEMS.register("tantalum", ()-> new Item(new Item.Properties().group(TantalusUnchained.CREATIVE_TAB)));
+    public static final RegistryObject<Item> TANTALUM_INGOT = TUChainItems.ITEMS.register("tantalum_ingot", ()-> new Item(new Item.Properties().group(TantalusUnchained.CREATIVE_TAB)));
+    public static final RegistryObject<Item> TANTALUM_NUGGET = TUChainItems.ITEMS.register("tantalum_nugget", ()-> new Item(new Item.Properties().group(TantalusUnchained.CREATIVE_TAB)));
     //Tier 1 Overworld Raw Resources
     public static final RegistryObject<Item> T1_AUTOTROPHS = TUChainItems.ITEMS.register("t1_autotrophs", ()-> new Item(new Item.Properties().group(TantalusUnchained.CREATIVE_TAB)));
     public static final RegistryObject<Item> T1_COMPLEX_LIFEFORMS = TUChainItems.ITEMS.register("t1_complex_lifeforms", ()-> new Item(new Item.Properties().group(TantalusUnchained.CREATIVE_TAB)));

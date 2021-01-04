@@ -1,7 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "layer0": "tantalusunchained:block/machine_block_tier1",
-    "layer1":"tantalusunchained:block/machine_block_powered_overlay"
-  }
-}

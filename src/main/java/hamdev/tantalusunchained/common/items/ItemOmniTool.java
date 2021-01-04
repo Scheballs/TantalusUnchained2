@@ -20,7 +20,7 @@ import static hamdev.tantalusunchained.common.util.helpers.*;
 
 public class ItemOmniTool extends Item {
     public ItemOmniTool() {
-        super(new Item.Properties().group(TantalusUnchained.CREATIVE_TAB));
+        super(new Item.Properties().maxStackSize(1).group(TantalusUnchained.CREATIVE_TAB));
     }
 
     @Override
@@ -42,8 +42,8 @@ public class ItemOmniTool extends Item {
                 //TODO: Create a 1 to 3 second delay between chat messages somehow
                 helpers.densityScanComplete(playerIn,x,z);
 
-                ItemStack reportItemStackHas = new ItemStack(TUChainItems.ITEM_RESOURCE_SCAN_REPORT_BLANK.get());
-                ItemStack reportItemStackNew = new ItemStack(TUChainItems.ITEM_RESOURCE_SCAN_REPORT.get());
+                ItemStack reportItemStackHas = new ItemStack(TUChainItems.RESOURCE_SCAN_REPORT_BLANK.get());
+                ItemStack reportItemStackNew = new ItemStack(TUChainItems.RESOURCE_SCAN_REPORT.get());
                 // Checks for the Item Resource Scan Report
                 if(playerIn.inventory.hasItemStack(reportItemStackHas) && !reportItemStackHas.hasTag()
                         && playerIn.inventory.getFirstEmptyStack() > 0)

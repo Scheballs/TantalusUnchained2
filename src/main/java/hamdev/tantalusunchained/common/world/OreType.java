@@ -12,7 +12,8 @@ public enum OreType
     , Features.States.LAPIS_ORE, 7)).withPlacement(
     Placement.DEPTH_AVERAGE.configure(new DepthAverageConfig(16, 16))).square());
     */
-    ORE_TANTALUM(TUChainBlocks.ORE_TANTALUM.get(), 7, 1, 24);
+    ORE_TANTALITE(TUChainBlocks.TANTALITE_STONE.get(),33,1,250),
+    ORE_TANTALUM(TUChainBlocks.TANTALUM_ORE.get(), 7, 1, 24);
 
     private final Block block;
     private final int maxVeinSize;

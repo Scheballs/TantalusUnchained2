@@ -1,6 +1,7 @@
-package hamdev.tantalusunchained.data;
+package hamdev.tantalusunchained.datagen;
 
 import hamdev.tantalusunchained.common.TantalusUnchained;
+import hamdev.tantalusunchained.common.block.TUChainBlocks;
 import hamdev.tantalusunchained.common.items.TUChainItems;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.LanguageProvider;
@@ -17,11 +18,57 @@ public class TUChainLanguageProvider extends LanguageProvider {
         switch(locale){
             case "en_us":
                 addItem(TUChainItems.OMNI_TOOL, "Omni Tool");
-                addItem(TUChainItems.ITEM_RESOURCE_SCAN_REPORT_BLANK, "Resource Scan Report Blank");
-                addItem(TUChainItems.ITEM_RESOURCE_SCAN_REPORT, "Resource Scan Report");
-                addItem(TUChainItems.INGOT_TANTALUM, "Tantalum Ingot");
-                addItem(TUChainItems.DUST_TANTALUM, "Tantalum Dust");
-                addItem(TUChainItems.NUGGET_TANTALUM, "Tantalum Nugget");
+                addItem(TUChainItems.RESOURCE_SCAN_REPORT_BLANK, "Resource Scan Report Blank");
+                addItem(TUChainItems.RESOURCE_SCAN_REPORT, "Resource Scan Report");
+                addItem(TUChainItems.TANTALUM, "Tantalum");
+                addItem(TUChainItems.TANTALUM_INGOT, "Tantalum Ingot");
+                addItem(TUChainItems.TANTALUM_NUGGET, "Tantalum Nugget");
+
+                addBlock(TUChainBlocks.TANTALUM_ORE, "Tantalum Ore");
+                addBlock(TUChainBlocks.TANTALUM_BLOCK, "Tantalum Block");
+                addBlock(TUChainBlocks.TANTALUM_TANK, "Tantalum Tank");
+
+                addBlock(TUChainBlocks.MACHINE_BLOCK_TIER1, "Machine Block Tier1");
+                addBlock(TUChainBlocks.MACHINE_BLOCK_TIER2, "Machine Block Tier2");
+                addBlock(TUChainBlocks.MACHINE_BLOCK_TIER3, "Machine Block Tier3");
+                addBlock(TUChainBlocks.MACHINE_BLOCK_TIER4, "Machine Block Tier4");
+                addBlock(TUChainBlocks.MACHINE_BLOCK_TIER5, "Machine Block Tier5");
+                addBlock(TUChainBlocks.MACHINE_BLOCK_TIER6, "Machine Block Tier6");
+                addBlock(TUChainBlocks.MACHINE_BLOCK_TIER7, "Machine Block Tier7");
+                addBlock(TUChainBlocks.MACHINE_BLOCK_TIER8, "Machine Block Tier8");
+                addBlock(TUChainBlocks.MACHINE_BLOCK_TIER9, "Machine Block Tier9");
+                addBlock(TUChainBlocks.MACHINE_BLOCK_TIER10, "Machine Block Tier10");
+
+                addBlock(TUChainBlocks.TANTALITE_COBBLESTONE, "Tantalite Cobblestone");
+                addBlock(TUChainBlocks.TANTALITE_STONE, "Tantalite Stone");
+                addBlock(TUChainBlocks.TANTALITE_SMOOTH_STONE, "Tantalite Smooth Stone");
+                addBlock(TUChainBlocks.TANTALITE_BRICKS, "Tantalite Bricks");
+
+                addBlock(TUChainBlocks.TANTALIZING_STRIPPED_LOG, "Tantalizing Stripped Log");
+                addBlock(TUChainBlocks.TANTALIZING_PLANKS, "Tantalizing Planks");
+                addBlock(TUChainBlocks.TANTALIZING_LOG, "Tantalizing Log");
+                addBlock(TUChainBlocks.TANTALIZING_WOOD, "Tantalizing Wood");
+                addBlock(TUChainBlocks.TANTALIZING_LEAVES, "Tantalizing Leaves");
+                addBlock(TUChainBlocks.TANTALIZING_SAPLING, "Tantalizing Sapling");
+
+                addBlock(TUChainBlocks.TANTALUM_STAIRS, "Tantalum Stairs");
+                addBlock(TUChainBlocks.TANTALUM_SLAB, "Tantalum Slab");
+                addBlock(TUChainBlocks.TANTALUM_FENCE, "Tantalum Fence");
+                addBlock(TUChainBlocks.TANTALUM_FENCE_GATE, "Tantalum Fence Gate");
+                addBlock(TUChainBlocks.TANTALUM_WALL, "Tantalum Wall");
+
+                addBlock(TUChainBlocks.TANTALITE_STAIRS, "Tantalite Stairs");
+                addBlock(TUChainBlocks.TANTALITE_SLAB, "Tantalite Slab");
+                addBlock(TUChainBlocks.TANTALITE_FENCE, "Tantalite Fence");
+                addBlock(TUChainBlocks.TANTALITE_FENCE_GATE, "Tantalite Fence Gate");
+                addBlock(TUChainBlocks.TANTALITE_WALL, "Tantalite Wall");
+
+                addBlock(TUChainBlocks.TANTALIZING_STAIRS, "Tantalizing Stairs");
+                addBlock(TUChainBlocks.TANTALIZING_SLAB, "Tantalizing Slab");
+                addBlock(TUChainBlocks.TANTALIZING_FENCE, "Tantalizing Fence");
+                addBlock(TUChainBlocks.TANTALIZING_FENCE_GATE, "Tantalizing Fence Gate");
+                addBlock(TUChainBlocks.TANTALIZING_WALL, "Tantalizing Wall");
+
                 addItem(TUChainItems.T1_AUTOTROPHS, "Autotrophs");
                 addItem(TUChainItems.T1_COMPLEX_LIFEFORMS, "Complex_Lifeforms");
                 addItem(TUChainItems.T1_HARD_WATER, "Hard_Water");

@@ -4,8 +4,9 @@ import hamdev.tantalusunchained.common.block.TUChainBlocks;
 import hamdev.tantalusunchained.client.proxy.ClientProxy;
 import hamdev.tantalusunchained.common.proxy.IProxy;
 import hamdev.tantalusunchained.common.items.TUChainItems;
-import hamdev.tantalusunchained.data.TUChainItemModelProvider;
-import hamdev.tantalusunchained.data.TUChainLanguageProvider;
+import hamdev.tantalusunchained.datagen.TUChainBlockStateProvider;
+import hamdev.tantalusunchained.datagen.TUChainItemModelProvider;
+import hamdev.tantalusunchained.datagen.TUChainLanguageProvider;
 import hamdev.tantalusunchained.server.proxy.ServerProxy;
 import hamdev.tantalusunchained.common.util.Config;
 import net.minecraft.data.DataGenerator;
@@ -21,23 +22,21 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.*;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.loading.FMLPaths;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(TantalusUnchained.MOD_ID)
 public class TantalusUnchained
 {
     public static final String MOD_ID = "tantalusunchained";
-    public static final String MOD_NAME = "Tantalus Unchained";
-    public static final String MOD_SHORT_NAME = "TUChain";
+    //public static final String MOD_NAME = "Tantalus Unchained";
+    //public static final String MOD_SHORT_NAME = "TUChain";
     public static final String MOD_TOML_FILE_LOC = "tantalusunchained-server.toml";
     public final IProxy PROXY = DistExecutor.safeRunForDist(() -> ClientProxy::new, ()-> ServerProxy::new);
     private static final String[] LOCALE_CODES = new String[]{
             "en_us","en_pt","de_de"
     };
 
-    private static final Logger LOGGER = LogManager.getLogger();
+    //private static final Logger LOGGER = LogManager.getLogger();
     public static final ItemGroup CREATIVE_TAB = new ItemGroup("creative_tab") {
         @Override
         public ItemStack createIcon() {
@@ -77,9 +76,10 @@ public class TantalusUnchained
         DataGenerator gen = event.getGenerator();
 
         if (event.includeClient()){
-            ExistingFileHelper efh = event.getExistingFileHelper();
+            ExistingFileHelper helper = event.getExistingFileHelper();
             addLanguageProvider(gen);
-            gen.addProvider(new TUChainItemModelProvider(gen, efh));
+            gen.addProvider(new TUChainItemModelProvider(gen, helper));
+            gen.addProvider(new TUChainBlockStateProvider(gen, helper));
 
         }
     }

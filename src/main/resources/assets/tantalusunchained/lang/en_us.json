@@ -1,17 +1,17 @@
 {
   "itemGroup.creative_tab": "Tantalus Unchained",
 
-  "block.tantalusunchained.block_resource_harvester": "§9Resource Harvester",
-  "block.tantalusunchained.block_processing_factory": "§9Resource Processing Factory",
-  "block.tantalusunchained.block_refinement_factory": "§9Processing Refinement Factory",
-  "block.tantalusunchained.block_specialization_factory": "§9Refinement Specialization Factory",
-  "block.tantalusunchained.block_component_factory": "§9Advanced Component Factory",
+  "block.tantalusunchained.resource_harvester": "§9Resource Harvester",
+  "block.tantalusunchained.processing_factory": "§9Resource Processing Factory",
+  "block.tantalusunchained.refinement_factory": "§9Processing Refinement Factory",
+  "block.tantalusunchained.specialization_factory": "§9Refinement Specialization Factory",
+  "block.tantalusunchained.component_factory": "§9Advanced Component Factory",
 
-  "block.tantalusunchained.block_storage_silo": "§9Storage Silo",
-  "block.tantalusunchained.block_command_and_control_center": "§9Command and Control Center",
-  "block.tantalusunchained.block_microwave_solar_plant": "§9Microwave Solar Power Plant",
-  "block.tantalusunchained.block_ai_compute_node": "§9AI Compute Node",
-  "block.tantalusunchained.block_space_elevator": "§9Space Elevator",
+  "block.tantalusunchained.storage_silo": "§9Storage Silo",
+  "block.tantalusunchained.command_and_control_center": "§9Command and Control Center",
+  "block.tantalusunchained.microwave_solar_plant": "§9Microwave Solar Power Plant",
+  "block.tantalusunchained.ai_compute_node": "§9AI Compute Node",
+  "block.tantalusunchained.space_elevator": "§9Space Elevator",
 
   "block.tantalusunchained.machine_block_tier1": "Machine Block Mk I",
   "block.tantalusunchained.machine_block_tier2": "Machine Block Mk II",
@@ -24,17 +24,17 @@
   "block.tantalusunchained.machine_block_tier9": "Machine Block Mk IX",
   "block.tantalusunchained.machine_block_tier10": "Machine Block Mk X",
 
-  "block.tantalusunchained.block_tantalum": "§9Tantalum Block",
-  "block.tantalusunchained.ore_tantalum": "§9Tantalum Ore",
+  "block.tantalusunchained.tantalum_ore": "§9Tantalum Ore",
+  "block.tantalusunchained.tantalum_block": "§9Tantalum Block",
 
   "item.tantalusunchained.guide_book": "§2Guide Book",
   "item.tantalusunchained.omni_tool": "§2Omni Tool",
 
-  "item.tantalusunchained.item_resource_scan_report_blank": "§9Blank Resource Scan Report",
-  "item.tantalusunchained.item_resource_scan_report": "§9Resource Scan Report",
-  "item.tantalusunchained.ingot_tantalum": "§9Tantalum Ingot",
-  "item.tantalusunchained.nugget_tantalum": "§9Tantalum Nugget",
-  "item.tantalusunchained.dust_tantalum": "§9Tantalum Dust",
+  "item.tantalusunchained.resource_scan_report_blank": "§9Blank Resource Scan Report",
+  "item.tantalusunchained.resource_scan_report": "§9Resource Scan Report",
+  "item.tantalusunchained.tantalum": "§9Tantalum",
+  "item.tantalusunchained.tantalum_ingot": "§9Tantalum Ingot",
+  "item.tantalusunchained.tantalum_nugget": "§9Tantalum Nugget",
 
   "item.tantalusunchained.t1_autotrophs": "§2Autotrophs",
   "item.tantalusunchained.t1_complex_lifeforms": "§2Complex Lifeforms",

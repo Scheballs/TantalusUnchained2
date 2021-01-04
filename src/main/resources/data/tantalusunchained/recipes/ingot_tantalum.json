@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "minecraft:iron_ore"
+  },
+  "result": "minecraft:iron_ingot",
+  "experience": 0.7,
+  "cookingtime": 200
+}
+
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "",
+  "ingredients": [{"item":"tantalusunchained:block_tantalum"}],
+  "result":{"item":"tantalusunchained:ingot_tantalum"},"count": 9
+}
