@@ -31,6 +31,7 @@ public class TUChainBlockStateProvider extends BlockStateProvider {
 
         simpleBlock(TUChainBlocks.TANTALITE_COBBLESTONE.get());
         simpleBlock(TUChainBlocks.TANTALITE_STONE.get());
+        simpleBlock(TUChainBlocks.TANTALITE_STONE_BRICKS.get());
         simpleBlock(TUChainBlocks.TANTALITE_SMOOTH_STONE.get());
         simpleBlock(TUChainBlocks.TANTALITE_BRICKS.get());
 

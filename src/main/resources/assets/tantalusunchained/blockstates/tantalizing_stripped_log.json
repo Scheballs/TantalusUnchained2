@@ -1,3 +1,16 @@
 {
-  "parent": "tantalusunchained:block/tantalizing_stripped_log"
+  "variants": {
+    "axis=x": {
+      "model": "tantalusunchained:block/tantalizing_stripped_log_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "tantalusunchained:block/tantalizing_stripped_log"
+    },
+    "axis=z": {
+      "model": "tantalusunchained:block/tantalizing_stripped_log_horizontal",
+      "x": 90
+    }
+  }
 }

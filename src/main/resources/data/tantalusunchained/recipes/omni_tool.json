@@ -5,7 +5,7 @@
     "l": {"item": "minecraft:lapis_lazuli"},
     "r": {"item": "minecraft:redstone"},
     "d": {"item": "minecraft:diamond"},
-    "t": {"item": "tantalusunchained:ingot_tantalum"},
+    "t": {"item": "tantalusunchained:tantalum_ingot"},
     "i": {"item": "minecraft:iron_ingot"}
   },
   "result":{"item":"tantalusunchained:item_omni_tool"}

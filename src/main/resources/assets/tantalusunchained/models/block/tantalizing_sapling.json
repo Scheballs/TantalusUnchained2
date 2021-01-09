@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "tantalusunchained:block/tantalizing_sapling"
+  }
+}

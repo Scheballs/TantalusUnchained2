@@ -4,6 +4,7 @@ import hamdev.tantalusunchained.common.TantalusUnchained;
 import hamdev.tantalusunchained.common.items.TUChainItems;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.trees.Tree;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.RegistryObject;
@@ -30,15 +31,16 @@ public class TUChainBlocks {
 
     public static final RegistryObject<Block> TANTALITE_COBBLESTONE = register( "tantalite_cobblestone",() -> new Block(AbstractBlock.Properties.from(Blocks.COBBLESTONE)));
     public static final RegistryObject<Block> TANTALITE_STONE = register( "tantalite_stone",() -> new Block(AbstractBlock.Properties.from(Blocks.STONE)));
+    public static final RegistryObject<Block> TANTALITE_STONE_BRICKS = register( "tantalite_stone_bricks",() -> new Block(AbstractBlock.Properties.from(Blocks.STONE_BRICKS)));
     public static final RegistryObject<Block> TANTALITE_SMOOTH_STONE = register( "tantalite_smooth_stone",() -> new Block(AbstractBlock.Properties.from(Blocks.SMOOTH_STONE)));
     public static final RegistryObject<Block> TANTALITE_BRICKS = register( "tantalite_bricks",() -> new Block(AbstractBlock.Properties.from(Blocks.BRICKS)));
 
-    public static final RegistryObject<RotatedPillarBlock> TANTALIZING_STRIPPED_LOG = register( "tantalizing_stripped_log",() -> new RotatedPillarBlock(AbstractBlock.Properties.from(Blocks.STRIPPED_OAK_LOG)));
     public static final RegistryObject<Block> TANTALIZING_PLANKS = register( "tantalizing_planks",() -> new Block(AbstractBlock.Properties.from(Blocks.OAK_PLANKS)));
     public static final RegistryObject<RotatedPillarBlock> TANTALIZING_LOG = register( "tantalizing_log",() -> new RotatedPillarBlock(AbstractBlock.Properties.from(Blocks.OAK_LOG)));
     public static final RegistryObject<Block> TANTALIZING_WOOD = register( "tantalizing_wood",() -> new Block(AbstractBlock.Properties.from(Blocks.OAK_WOOD)));
-    public static final RegistryObject<Block> TANTALIZING_LEAVES = register( "tantalizing_leaves",() -> new Block(AbstractBlock.Properties.from(Blocks.OAK_LEAVES)));
-    public static final RegistryObject<Block> TANTALIZING_SAPLING = register( "tantalizing_sapling",() -> new Block(AbstractBlock.Properties.from(Blocks.OAK_SAPLING)));
+    public static final RegistryObject<LeavesBlock> TANTALIZING_LEAVES = register( "tantalizing_leaves",() -> new LeavesBlock(AbstractBlock.Properties.from(Blocks.OAK_LEAVES)));
+    public static final RegistryObject<Block> TANTALIZING_SAPLING = register( "tantalizing_sapling",() -> new TantalizingSapling( ()-> new TantalizingTree(), AbstractBlock.Properties.from(Blocks.OAK_SAPLING)));
+    public static final RegistryObject<RotatedPillarBlock> TANTALIZING_STRIPPED_LOG = register( "tantalizing_stripped_log",() -> new RotatedPillarBlock(AbstractBlock.Properties.from(Blocks.STRIPPED_OAK_LOG)));
 
     public static final RegistryObject<Block> TANTALUM_STAIRS = register( "tantalum_stairs",() -> new Block(AbstractBlock.Properties.from(Blocks.SMOOTH_QUARTZ_STAIRS)));
     public static final RegistryObject<Block> TANTALUM_SLAB = register( "tantalum_slab",() -> new Block(AbstractBlock.Properties.from(Blocks.SMOOTH_QUARTZ_SLAB)));

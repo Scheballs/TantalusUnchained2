@@ -1,7 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern":["xxx","xxx","xxx"],
-          "key": {"x": {"item": "tantalusunchained:ingot_tantalum"}
-          },
+          "key": {"x": {"item": "tantalusunchained:tantalum_ingot"}},
             "result":{"item":"tantalusunchained:tantalum_block"}
 }

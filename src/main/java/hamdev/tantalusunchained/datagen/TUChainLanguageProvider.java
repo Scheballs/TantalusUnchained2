@@ -41,6 +41,7 @@ public class TUChainLanguageProvider extends LanguageProvider {
 
                 addBlock(TUChainBlocks.TANTALITE_COBBLESTONE, "Tantalite Cobblestone");
                 addBlock(TUChainBlocks.TANTALITE_STONE, "Tantalite Stone");
+                addBlock(TUChainBlocks.TANTALITE_STONE_BRICKS, "Tantalite Stone Bricks");
                 addBlock(TUChainBlocks.TANTALITE_SMOOTH_STONE, "Tantalite Smooth Stone");
                 addBlock(TUChainBlocks.TANTALITE_BRICKS, "Tantalite Bricks");
 
@@ -90,7 +91,7 @@ public class TUChainLanguageProvider extends LanguageProvider {
                 addItem(TUChainItems.T2_BACTERIA, "Bacteria");
                 addItem(TUChainItems.T2_BIOFUELS, "Biofuels");
                 addItem(TUChainItems.T2_BIOMASS, "Biomass");
-                addItem(TUChainItems.T2_CELLULOSE_FIBRES, "Cellulose Fibres");
+                addItem(TUChainItems.T2_INDUSTRIAL_FIBERS, "Industrial Fibers");
                 addItem(TUChainItems.T2_PROCESSED_WATER, "Processed Water");
                 addItem(TUChainItems.T2_PROTEINS, "Proteins");
 
@@ -101,7 +102,7 @@ public class TUChainLanguageProvider extends LanguageProvider {
                 addItem(TUChainItems.T2_TOXIC_METALS, "Toxic Metals");
 
                 addItem(TUChainItems.T2_ELECTROLYTES, "Electrolytes");
-                addItem(TUChainItems.T2_OXIDIZING_AGENT, "Oxidizing Agent");
+                addItem(TUChainItems.T2_OXIDIZING_COMPOUND, "Oxidizing Compound");
                 addItem(TUChainItems.T2_OXYGEN, "Oxygen");
                 addItem(TUChainItems.T2_PLASMOIDS, "Plasmoids");
 
@@ -111,16 +112,16 @@ public class TUChainLanguageProvider extends LanguageProvider {
                 addItem(TUChainItems.T3_COOLANT, "Coolant");
                 addItem(TUChainItems.T3_ENRICHED_URANIUM, "Enriched Uranium");
                 addItem(TUChainItems.T3_FERTILIZER, "Fertilizer");
-                addItem(TUChainItems.T3_GENETICALLY_MODIFIED_LIVESTOCK, "Genetically Modified Livestock");
-                addItem(TUChainItems.T3_GORILLA_GLASS, "Gorilla Glass");
-                addItem(TUChainItems.T3_HIGH_STRENGTH_BIOPLASTICS, "High Strength Bioplastics");
-                addItem(TUChainItems.T3_HIGH_STRENGTH_TEXTILES, "High Strength Textiles");
+                addItem(TUChainItems.T3_GENETICALLY_ENHANCED_LIVESTOCK, "Genetically Enhanced Livestock");
+                addItem(TUChainItems.T3_SILICATE_GLASS, "Silicate Glass");
+                addItem(TUChainItems.T3_SUPERTENSILE_PLASTICS, "Supertensile Plastics");
+                addItem(TUChainItems.T3_POLYTEXTILES, "Polytextiles");
                 addItem(TUChainItems.T3_LIVESTOCK, "Livestock");
                 addItem(TUChainItems.T3_MECHANICAL_PARTS, "Mechanical Parts");
                 addItem(TUChainItems.T3_MICROFIBER_SHIELDING, "Microfiber Shielding");
                 addItem(TUChainItems.T3_MINIATURE_ELECTRONICS, "Miniature Electronics");
                 addItem(TUChainItems.T3_NANITES, "Nanites");
-                addItem(TUChainItems.T3_NATURAL_SUPERCONDUCTORS, "Natural Superconductors");
+                addItem(TUChainItems.T3_SUPERCONDUCTORS, "Superconductors");
                 addItem(TUChainItems.T3_OXIDES, "Oxides");
                 addItem(TUChainItems.T3_POLYARAMIDS, "Polyaramids");
                 addItem(TUChainItems.T3_ROCKET_FUEL, "Rocket Fuel");
@@ -129,35 +130,36 @@ public class TUChainLanguageProvider extends LanguageProvider {
                 addItem(TUChainItems.T3_TRANSMITTER, "Transmitter");
                 addItem(TUChainItems.T3_VIRAL_AGENT, "Viral Agent");
                 addItem(TUChainItems.T3_WATER_COOLED_CPU, "Water-Cooled CPU");
+
                 addItem(TUChainItems.T4_CONDENSATES, "Condensates");
                 addItem(TUChainItems.T4_CRYOPROTECTANT_SOLUTION, "Cryoprotectant Solution");
-                addItem(TUChainItems.T4_CYBERNETIC_BIO_GEL, "Cybernetic Bio-Gel");
+                addItem(TUChainItems.T4_GEL_MATRIX_BIOPASTE, "Gel-Matrix Biopaste");
                 addItem(TUChainItems.T4_GUIDANCE_SYSTEMS, "Guidance Systems");
                 addItem(TUChainItems.T4_HIGH_TECH_TRANSMITTERS, "High-Tech Transmitters");
                 addItem(TUChainItems.T4_INDUSTRIAL_EXPLOSIVES, "Industrial Explosives");
-                addItem(TUChainItems.T4_INTELLIGENT_KEVLAR, "Intelligent Kevlar");
-                addItem(TUChainItems.T4_MEMORY_CRYSTAL, "Memory Crystal");
-                addItem(TUChainItems.T4_NANO_CAMERA, "Nano Camera");
-                addItem(TUChainItems.T4_NANO_ORGANIC_FABRICATION_UNIT, "Nano Organic Fabrication Unit");
-                addItem(TUChainItems.T4_NANOMANUFACTURING_UNIT, "Nanomanufacturing Unit");
-                addItem(TUChainItems.T4_NEURAL_NETWORK_INTERFACE, "Neural Network Interface");
+                addItem(TUChainItems.T4_HERMETIC_MEMBRANES, "Hermetic Membranes");
+                addItem(TUChainItems.T4_DATA_CHIPS, "Data Chips");
+                addItem(TUChainItems.T4_CAMERA_DRONES, "Camera Drones");
+                addItem(TUChainItems.T4_BIOTECH_RESEARCH_REPORTS, "Biotech Research Reports");
+                addItem(TUChainItems.T4_SMARTFAB_UNITS, "Smartfab Units");
+                addItem(TUChainItems.T4_TRANSCRANIAL_MICROCONTROLLERS, "Transcranial Microcontrollers");
                 addItem(TUChainItems.T4_NUCLEAR_REACTORS, "Nuclear Reactors");
                 addItem(TUChainItems.T4_PLANETARY_VEHICLES, "Planetary Vehicles");
                 addItem(TUChainItems.T4_ROBOTICS, "Robotics");
                 addItem(TUChainItems.T4_SUPERCOMPUTERS, "Supercomputers");
-                addItem(TUChainItems.T4_SYNTHETIC_SUPERCONDUCTORS, "Synthetic Superconductors");
+                addItem(TUChainItems.T4_UKOMI_SUPERCONDUCTORS, "Ukomi Superconductors");
                 addItem(TUChainItems.T4_SYNTHETIC_SYNAPSES, "Synthetic Synapses");
-                addItem(TUChainItems.T4_THREAT_DETECTION_SYSTEM, "Threat Detection System");
-                addItem(TUChainItems.T4_USER_INTERFACE, "User Interface");
+                addItem(TUChainItems.T4_HAZMAT_DETECTION_SYSTEMS, "Hazmat Detection Systems");
+                addItem(TUChainItems.T4_NEOCOMS, "Neocoms");
                 addItem(TUChainItems.T4_VACCINES, "Vaccines");
 
-                addItem(TUChainItems.T5_ADAPTIVE_POWER_CORE, "Adaptive Power Core");
-                addItem(TUChainItems.T5_AI_CENTRAL_PROCESSING_CORE, "AI Central Processing Core");
-                addItem(TUChainItems.T5_CONNECTED_SMART_CONTROLLER, "Connected Smart Controller");
-                addItem(TUChainItems.T5_CYBERNETIC_CUSTODIAL_DRONES, "Cybernetic Custodial Drones");
-                addItem(TUChainItems.T5_INTELLIGENT_BONDING_AGENTS, "Intelligent Bonding Agents");
-                addItem(TUChainItems.T5_LIMITED_NANO_ASSEMBLER, "Limited Nano Assembler");
-                addItem(TUChainItems.T5_NEURAL_NETWORK_MAINFRAME, "Neural Network Mainframe");
+                addItem(TUChainItems.T5_SELF_HARMONIZING_POWER_CORE, "Self Harmonizing Power Core");
+                addItem(TUChainItems.T5_RECURSIVE_COMPUTING_MODULE, "Recursive Computing Module");
+                addItem(TUChainItems.T5_BROADCAST_NODE, "Broadcast Node");
+                addItem(TUChainItems.T5_INTEGRITY_RESPONSE_DRONES, "Integrity Response Drones");
+                addItem(TUChainItems.T5_ORGANIC_MORTAR_APPLICATORS, "Organic Mortar Applicators");
+                addItem(TUChainItems.T5_NANO_FACTORY, "Nano Factory");
+                addItem(TUChainItems.T5_WETWARE_MAINFRAME, "Wetware Mainframe");
                 addItem(TUChainItems.T5_STERILE_CONDUITS, "Sterile Conduits");
                 break;
             default:

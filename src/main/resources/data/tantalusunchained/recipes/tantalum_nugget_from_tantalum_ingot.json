@@ -1,0 +1,6 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "tantalum_ingot",
+  "ingredients": [{"item": "tantalusunchained:tantalum_ingot"}],
+  "result": {"item": "tantalusunchained:tantalum_nugget","count": 9}
+}

@@ -1,22 +1,17 @@
 package hamdev.tantalusunchained.common.items;
 
 import hamdev.tantalusunchained.common.TantalusUnchained;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.util.ITooltipFlag;
-import net.minecraft.client.util.InputMappings;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.world.World;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import org.lwjgl.glfw.GLFW;
 
 import javax.annotation.Nullable;
 import java.util.List;
 
-import static hamdev.tantalusunchained.common.util.helpers.isHoldingShift;
+import static hamdev.tantalusunchained.common.util.Helpers.isHoldingShift;
 
 public class ItemResourceScanReport extends Item
 {

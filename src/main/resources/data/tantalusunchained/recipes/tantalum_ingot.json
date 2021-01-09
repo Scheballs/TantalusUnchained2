@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "tantalusunchained:tantalum"
+  },
+  "result": {"item": "tantalusunchained:tantalum_ingot","count": 2},
+  "experience": 0.7,
+  "cookingtime": 200
+}

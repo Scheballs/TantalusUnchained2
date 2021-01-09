@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "tantalusunchained:item/tier5/t5_organic_mortar_applicators"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "tantalusunchained:block/tantalizing_log_top",
+    "side": "tantalusunchained:block/tantalizing_log"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {"item": "tantalusunchained:tantalum_log"},
+    {"item": "tantalusunchained:tantalum_stripped_log"}
+  ],
+  "result": {
+    "item": "tantalusunchained:tantalum_planks",
+    "count": 4
+  }
+}

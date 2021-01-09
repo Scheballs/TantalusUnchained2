@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": [
+    {"item": "tantalusunchained:tantalum_pickaxe"},
+    {"item": "tantalusunchained:tantalum_shovel"},
+    {"item": "tantalusunchained:tantalum_axe"},
+    {"item": "tantalusunchained:tantalum_hoe"},
+    {"item": "tantalusunchained:tantalum_sword"},
+    {"item": "tantalusunchained:tantalum_helmet"},
+    {"item": "tantalusunchained:tantalum_chestplate"},
+    {"item": "tantalusunchained:tantalum_leggings"},
+    {"item": "tantalusunchained:tantalum_boots"},
+    {"item": "tantalusunchained:tantalum_horse_armor"}
+  ],
+  "result": "tantalusunchained:tantalum_nugget",
+  "experience": 0.1,
+  "cookingtime": 50
+}

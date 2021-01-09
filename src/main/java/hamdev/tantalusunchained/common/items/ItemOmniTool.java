@@ -2,7 +2,7 @@
 package hamdev.tantalusunchained.common.items;
 
 import hamdev.tantalusunchained.common.TantalusUnchained;
-import hamdev.tantalusunchained.common.util.helpers;
+import hamdev.tantalusunchained.common.util.Helpers;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -16,7 +16,7 @@ import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.world.World;
 import java.util.List;
 
-import static hamdev.tantalusunchained.common.util.helpers.*;
+import static hamdev.tantalusunchained.common.util.Helpers.*;
 
 public class ItemOmniTool extends Item {
     public ItemOmniTool() {
@@ -38,9 +38,9 @@ public class ItemOmniTool extends Item {
             if(worldIn.isRemote()) {
                 int x = playerIn.getPosition().getX();
                 int z = playerIn.getPosition().getZ();
-                helpers.densityScanBegin(playerIn);
+                Helpers.densityScanBegin(playerIn);
                 //TODO: Create a 1 to 3 second delay between chat messages somehow
-                helpers.densityScanComplete(playerIn,x,z);
+                Helpers.densityScanComplete(playerIn,x,z);
 
                 ItemStack reportItemStackHas = new ItemStack(TUChainItems.RESOURCE_SCAN_REPORT_BLANK.get());
                 ItemStack reportItemStackNew = new ItemStack(TUChainItems.RESOURCE_SCAN_REPORT.get());
@@ -51,7 +51,7 @@ public class ItemOmniTool extends Item {
                     int slotId1 = playerIn.inventory.getSlotFor(reportItemStackHas);
                     int slotId2 = playerIn.inventory.getFirstEmptyStack();
                     String[] resources = getDimResources(playerIn);
-                    String[] densityPctStr = helpers.getResourceDensityPctString(playerIn, x, z);
+                    String[] densityPctStr = Helpers.getResourceDensityPctString(playerIn, x, z);
                     String[] resourceDensityArray = concatArrayIndexes(resources, densityPctStr);
                     String worldName = getDimName(playerIn); // ex. The Nether
                     String chunkCords = "[" + playerIn.chunkCoordX +"x,"+ playerIn.chunkCoordZ + "z]"; // [10x,4z]
