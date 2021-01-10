@@ -1,3 +1,6 @@
 {
-  "parent": "tantalusunchained:block/tantalizing_sapling"
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "tantalusunchained:block/tantalizing_sapling"
+  }
 }

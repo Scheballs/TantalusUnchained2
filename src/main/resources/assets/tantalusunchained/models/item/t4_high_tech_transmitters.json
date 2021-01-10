@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "tantalusunchained:item/tier4/t4_high_tech_transmitters"
+  }
+}

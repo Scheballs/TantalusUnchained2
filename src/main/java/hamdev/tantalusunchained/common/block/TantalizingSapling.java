@@ -55,7 +55,7 @@ public class TantalizingSapling extends BushBlock implements IGrowable {
             worldIn.setBlockState(pos, state.func_235896_a_(STAGE),4); //state.cycle
         }
         else{
-            if(ForgeEventFactory.saplingGrowTree(worldIn, rand, pos)){
+            if(!ForgeEventFactory.saplingGrowTree(worldIn, rand, pos)){
                 return;
             }
             this.tree.get().attemptGrowTree(worldIn, worldIn.getChunkProvider().getChunkGenerator(),
