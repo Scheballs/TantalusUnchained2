@@ -28,6 +28,8 @@ public class TUChainLanguageProvider extends LanguageProvider {
                 addBlock(TUChainBlocks.TANTALUM_BLOCK, "Tantalum Block");
                 addBlock(TUChainBlocks.TANTALUM_TANK, "Tantalum Tank");
 
+                addBlock(TUChainBlocks.BASIC_ORBITAL_SOLAR_POWER_PLANT_MK_I, "Basic Orbital Solar Power Plant Mk I");
+
                 addBlock(TUChainBlocks.MACHINE_BLOCK_TIER1, "Machine Block Tier1");
                 addBlock(TUChainBlocks.MACHINE_BLOCK_TIER2, "Machine Block Tier2");
                 addBlock(TUChainBlocks.MACHINE_BLOCK_TIER3, "Machine Block Tier3");

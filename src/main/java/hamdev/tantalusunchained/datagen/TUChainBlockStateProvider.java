@@ -18,6 +18,7 @@ public class TUChainBlockStateProvider extends BlockStateProvider {
         simpleBlock(TUChainBlocks.TANTALUM_ORE.get());
         simpleBlock(TUChainBlocks.TANTALUM_BLOCK.get());
 
+        simpleBlock(TUChainBlocks.BASIC_ORBITAL_SOLAR_POWER_PLANT_MK_I.get());
         simpleBlock(TUChainBlocks.MACHINE_BLOCK_TIER1.get());
         simpleBlock(TUChainBlocks.MACHINE_BLOCK_TIER2.get());
         simpleBlock(TUChainBlocks.MACHINE_BLOCK_TIER3.get());

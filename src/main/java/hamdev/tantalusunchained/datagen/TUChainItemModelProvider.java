@@ -24,6 +24,8 @@ public class TUChainItemModelProvider extends ItemModelProvider {
         singleTexture(TUChainBlocks.TANTALUM_BLOCK.get().getRegistryName().getPath(), new ResourceLocation("item/handheld"),"layer0", new ResourceLocation(TantalusUnchained.MOD_ID, "block/tantalum_block"));
         singleTexture(TUChainBlocks.TANTALUM_TANK.get().getRegistryName().getPath(), new ResourceLocation("item/handheld"),"layer0", new ResourceLocation(TantalusUnchained.MOD_ID, "block/tantalum_tank"));
 
+        singleTexture(TUChainBlocks.BASIC_ORBITAL_SOLAR_POWER_PLANT_MK_I.get().getRegistryName().getPath(), new ResourceLocation("item/handheld"),"layer0", new ResourceLocation(TantalusUnchained.MOD_ID, "block/basic_orbital_solar_power_plant_mk_i"));
+
         singleTexture(TUChainBlocks.MACHINE_BLOCK_TIER1.get().getRegistryName().getPath(), new ResourceLocation("item/handheld"),"layer0", new ResourceLocation(TantalusUnchained.MOD_ID, "block/machine_block_tier1"));
         singleTexture(TUChainBlocks.MACHINE_BLOCK_TIER2.get().getRegistryName().getPath(), new ResourceLocation("item/handheld"),"layer0", new ResourceLocation(TantalusUnchained.MOD_ID, "block/machine_block_tier2"));
         singleTexture(TUChainBlocks.MACHINE_BLOCK_TIER3.get().getRegistryName().getPath(), new ResourceLocation("item/handheld"),"layer0", new ResourceLocation(TantalusUnchained.MOD_ID, "block/machine_block_tier3"));

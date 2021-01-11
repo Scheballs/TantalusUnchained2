@@ -29,6 +29,8 @@ public class TUChainBlocks {
     public static final RegistryObject<Block> TANTALUM_BLOCK = register( "tantalum_block",() -> new Block(AbstractBlock.Properties.from(Blocks.IRON_BLOCK)));
     public static final RegistryObject<Block> TANTALUM_TANK = register( "tantalum_tank",() -> new Block(AbstractBlock.Properties.from(Blocks.IRON_BLOCK)));
 
+    public static final RegistryObject<Block> BASIC_ORBITAL_SOLAR_POWER_PLANT_MK_I = register( "basic_orbital_solar_power_plant_mk_i",() -> new Block(AbstractBlock.Properties.from(Blocks.IRON_BLOCK)));
+
     public static final RegistryObject<Block> TANTALITE_COBBLESTONE = register( "tantalite_cobblestone",() -> new Block(AbstractBlock.Properties.from(Blocks.COBBLESTONE)));
     public static final RegistryObject<Block> TANTALITE_STONE = register( "tantalite_stone",() -> new Block(AbstractBlock.Properties.from(Blocks.STONE)));
     public static final RegistryObject<Block> TANTALITE_STONE_BRICKS = register( "tantalite_stone_bricks",() -> new Block(AbstractBlock.Properties.from(Blocks.STONE_BRICKS)));
