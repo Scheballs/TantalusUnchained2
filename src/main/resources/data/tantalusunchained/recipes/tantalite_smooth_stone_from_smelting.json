@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "tantalusunchained:tantalite_stone"
+  },
+  "result": "tantalusunchained:tantalite_smooth_stone",
+  "experience": 0.1,
+  "cookingtime": 200
+}

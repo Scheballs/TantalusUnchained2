@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":[" t ","ggg"," t "],
+  "key": {"g": {"item": "minecraft:glass"},
+    "t": {"item": "tantalusunchained:tantalum_ingot"}
+  },
+  "result":{"item":"tantalusunchained:tantalum_tank"}
+}

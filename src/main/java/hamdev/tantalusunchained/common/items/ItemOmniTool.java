@@ -26,7 +26,7 @@ public class ItemOmniTool extends Item {
     @Override
     public void addInformation(ItemStack stack, World player, List<ITextComponent> list, ITooltipFlag flag) {
         super.addInformation(stack, player, list, flag);
-        list.add(new StringTextComponent("\u00a72" + "Right Click to scan for resources"));
+        list.add(new StringTextComponent("\u00a72" + "Right click to scan for resources"));
     }
 
     @Override
@@ -62,7 +62,7 @@ public class ItemOmniTool extends Item {
                         nbt.putString("Density"+i, resourceDensityArray[i]);
                     }
                     playerIn.inventory.getStackInSlot(slotId2).setTag(nbt);
-                    String disName = worldName +" Chunk [" + playerIn.chunkCoordX + "x," + playerIn.chunkCoordZ +"z] scan";
+                    String disName = worldName +" Chunk "+ chunkCords +" scan";
                     playerIn.inventory.getStackInSlot(slotId2).setDisplayName(new StringTextComponent(disName));
                     playerIn.inventory.getStackInSlot(slotId1).shrink(1);
                 }

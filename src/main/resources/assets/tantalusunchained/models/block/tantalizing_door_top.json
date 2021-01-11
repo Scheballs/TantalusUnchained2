@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_top",
+  "textures": {
+    "top": "tantalusunchained:block/tantalizing_door_top",
+    "bottom": "tantalusunchained:block/tantalizing_door_bottom"
+  }
+}

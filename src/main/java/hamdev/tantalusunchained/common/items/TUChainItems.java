@@ -9,8 +9,8 @@ import net.minecraftforge.registries.ForgeRegistries;
 public class TUChainItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, TantalusUnchained.MOD_ID);
     public static final RegistryObject<ItemOmniTool> OMNI_TOOL = TUChainItems.ITEMS.register("omni_tool" , ItemOmniTool::new);
-    public static final RegistryObject<Item> RESOURCE_SCAN_REPORT_BLANK = TUChainItems.ITEMS.register("resource_scan_report_blank", ()-> new Item(new Item.Properties().group(TantalusUnchained.CREATIVE_TAB)));
-    public static final RegistryObject<Item> RESOURCE_SCAN_REPORT = TUChainItems.ITEMS.register("resource_scan_report", ()-> new Item(new Item.Properties().group(TantalusUnchained.CREATIVE_TAB)));
+    public static final RegistryObject<Item> RESOURCE_SCAN_REPORT_BLANK = TUChainItems.ITEMS.register("resource_scan_report_blank", ItemResourceScanReportBlank::new);
+    public static final RegistryObject<Item> RESOURCE_SCAN_REPORT = TUChainItems.ITEMS.register("resource_scan_report", ItemResourceScanReport::new);
     public static final RegistryObject<Item> TANTALUM = TUChainItems.ITEMS.register("tantalum", ()-> new Item(new Item.Properties().group(TantalusUnchained.CREATIVE_TAB)));
     public static final RegistryObject<Item> TANTALUM_INGOT = TUChainItems.ITEMS.register("tantalum_ingot", ()-> new Item(new Item.Properties().group(TantalusUnchained.CREATIVE_TAB)));
     public static final RegistryObject<Item> TANTALUM_NUGGET = TUChainItems.ITEMS.register("tantalum_nugget", ()-> new Item(new Item.Properties().group(TantalusUnchained.CREATIVE_TAB)));

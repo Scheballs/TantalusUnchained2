@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "tantalusunchained:block/tantalizing_slab"
+    },
+    "type=double": {
+      "model": "tantalusunchained:block/tantalizing_planks"
+    },
+    "type=top": {
+      "model": "tantalusunchained:block/tantalizing_slab_top"
+    }
+  }
+}

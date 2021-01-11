@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "tantalusunchained:block/tantalizing_wood",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "tantalusunchained:block/tantalizing_wood"
+    },
+    "axis=z": {
+      "model": "tantalusunchained:block/tantalizing_wood",
+      "x": 90
+    }
+  }
+}

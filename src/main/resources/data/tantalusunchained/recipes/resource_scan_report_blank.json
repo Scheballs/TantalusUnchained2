@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {"item": "tantalusunchained:tantalum_nugget"}
+    ,{"item": "minecraft:paper"}
+  ],
+  "result": {
+    "item": "tantalusunchained:resource_scan_report_blank",
+    "count": 1
+  }
+}

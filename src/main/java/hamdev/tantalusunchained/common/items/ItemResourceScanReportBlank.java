@@ -27,6 +27,7 @@ public class ItemResourceScanReportBlank extends Item
         //TODO: Need to make the hold SHIFT tooltip go away while holding shift.
         if(isHoldingShift())
         {
+            tooltip.remove(1);
             tooltip.add(new StringTextComponent("Place me in your inventory so the Omni Tool can write a scan report on me"));
         }
     }

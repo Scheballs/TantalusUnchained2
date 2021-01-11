@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "tantalusunchained:tantalite_cobblestone"
+  },
+  "result": "tantalusunchained:tantalite_stone",
+  "experience": 0.1,
+  "cookingtime": 200
+}

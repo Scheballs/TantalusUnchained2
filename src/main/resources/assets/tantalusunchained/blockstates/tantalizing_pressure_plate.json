@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "tantalusunchained:block/tantalizing_pressure_plate"
+    },
+    "powered=true": {
+      "model": "tantalusunchained:block/tantalizing_pressure_plate_down"
+    }
+  }
+}

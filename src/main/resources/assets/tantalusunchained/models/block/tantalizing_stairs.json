@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "tantalusunchained:block/tantalizing_planks",
+    "top": "tantalusunchained:block/tantalizing_planks",
+    "side": "tantalusunchained:block/tantalizing_planks"
+  }
+}

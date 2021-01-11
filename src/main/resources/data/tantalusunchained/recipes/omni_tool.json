@@ -8,5 +8,5 @@
     "t": {"item": "tantalusunchained:tantalum_ingot"},
     "i": {"item": "minecraft:iron_ingot"}
   },
-  "result":{"item":"tantalusunchained:item_omni_tool"}
+  "result":{"item":"tantalusunchained:omni_tool"}
 }

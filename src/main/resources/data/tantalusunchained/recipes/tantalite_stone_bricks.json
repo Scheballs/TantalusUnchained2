@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":["cc ","cc ","   "],
+  "key": {
+    "c": {"item": "tantalusunchained:tantalite_stone"}
+  },
+  "result":{"item":"tantalusunchained:tantalite_stone_bricks","count": 4}
+}

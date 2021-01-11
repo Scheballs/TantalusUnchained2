@@ -1,7 +1,7 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {"item": "tantalusunchained:tantalizing_log"}
+    {"item": "tantalusunchained:tantalizing_stripped_log"}
   ],
   "result": {
     "item": "tantalusunchained:tantalizing_planks",

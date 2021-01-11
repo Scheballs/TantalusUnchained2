@@ -29,13 +29,13 @@ public class ItemResourceScanReport extends Item
         {
             if (stack.hasTag() )
             {
+                tooltip.remove(1);
                 for(String nbtKey : stack.getTag().keySet())
                 {
-                String nbtValueS = stack.getTag().getString(nbtKey);
-                tooltip.add(new StringTextComponent(nbtValueS));
+                String nbtValues = stack.getTag().getString(nbtKey);
+                tooltip.add(new StringTextComponent(nbtValues));
                 }
             }
-            tooltip.add(new StringTextComponent("Place me in your inventory so the Omni Tool can write a scan report on me"));
         }
     }
 }

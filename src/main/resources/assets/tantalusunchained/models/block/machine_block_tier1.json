@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "layer0": "tantalusunchained:block/machine_block_tier1_animate"
+    "layer0": "tantalusunchained:block/machine_block_tier1"
   }
 }
